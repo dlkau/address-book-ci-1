@@ -13,6 +13,7 @@ public class Example {
         person.setName("John Doe");
         System.out.println(person.getName());
 
+        /// Demonstrating polymorphism
         // Equivalently, we can use the constructor method
         Person person2 = new Person("John Doe");
         System.out.println(person2.getName());
@@ -36,5 +37,12 @@ public class Example {
             System.out.println(val);
         }
         */
+
+        // Demonstrating the concept of polymorphism
+        System.out.println("Testing the concept of polymorphism from here:\n");
+        Person person3 = new Person("John Doe");
+        System.out.println(person3.getName()); // This should print "John Doe"
+        Person student = new Student("John Doe", new String[] {"Math", "Science"});
+        System.out.println(student.getName()); // This should print "Student: John Doe"
     }
 }
