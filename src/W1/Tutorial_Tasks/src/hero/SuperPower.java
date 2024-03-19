@@ -1,4 +1,4 @@
-package hero;
+package W1.Tutorial_Tasks.src.hero;
 
 /**
  * This enumerated type lists super powers commonly available
