@@ -1,4 +1,4 @@
-package hero;
+package W1.Tutorial_Tasks.src.hero;
 
 import java.io.PrintWriter;
 
@@ -35,7 +35,5 @@ public class AgentTester {
 				"[Ejector seat]: " + Bond.getGadget());
 		screen.println(" 4. But Joe 90's main weapon was made by his (adopted) " +
 				"father [Special glasses]: " + Joe90.getGadget());
-			
 	}
-
 }
