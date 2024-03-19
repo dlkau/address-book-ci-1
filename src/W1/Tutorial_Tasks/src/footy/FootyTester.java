@@ -1,4 +1,4 @@
-package footy;
+package W1.Tutorial_Tasks.src.footy;
 
 import java.io.PrintWriter;
 

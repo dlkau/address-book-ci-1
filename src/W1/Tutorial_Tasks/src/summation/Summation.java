@@ -1,4 +1,4 @@
-package summation;
+package W1.Tutorial_Tasks.src.summation;
 
 /* 
  * The program is meant to sum the natural numbers in a
@@ -9,10 +9,11 @@ public class Summation {
 
 	/* Constants defining the inclusive bounds of the range to be summed */
 	private static final short START = 1;
-	private static final short END = 5; // First try 5, then 1000;
+//	private static final short END = 5; // First try 5, then 1000;
+	private static final short END = 1000; // Testing 1000
 
 	/* Variable to hold the sum of numbers from START to END, inclusive */
-	private short total;
+	private int total; // Increased the data type to an int
 
 	/* Constructor to initialize instance variable */
 	public Summation() {
@@ -21,7 +22,7 @@ public class Summation {
 
 	/* Method to calculate the sum */
 	public void add() {
-		for (short index = START; index < END; index++) {
+		for (short index = START; index <= END; index++) { // Updated the condition to be inclusive
 			total += index;
 		}
 	}
