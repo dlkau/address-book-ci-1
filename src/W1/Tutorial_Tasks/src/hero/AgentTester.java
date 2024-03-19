@@ -2,7 +2,6 @@ package W1.Tutorial_Tasks.src.hero;
 
 import java.io.PrintWriter;
 
-
 /* 
  * This program briefly tests the implementation of your "SecretAgent" class.
  * The values displayed in square brackets are the expected answers.
