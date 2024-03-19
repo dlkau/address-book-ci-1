@@ -14,8 +14,8 @@ public class FootyScore {
      * @return the number of points the Footy team has scored.
      */
     public int getPoints(){
-        int POINTS_PER_BEHIND = 6;
-        int POINTS_PER_GOAL = 1;
+        int POINTS_PER_BEHIND = 1;
+        int POINTS_PER_GOAL = 6;
         return (behinds * POINTS_PER_BEHIND) + (goals * POINTS_PER_GOAL);
     }
 
