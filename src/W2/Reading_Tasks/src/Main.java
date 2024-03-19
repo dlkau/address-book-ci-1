@@ -16,10 +16,6 @@ public class Main {
             }
             System.out.println();
         }
-        System.out.println("Alice likes rectangles!");
-        for (int i = 0; i < 5; i++) {
-            System.out.println("*****************");
-        }
     }
 
     public static String leftpad(String str, int len, char ch){
