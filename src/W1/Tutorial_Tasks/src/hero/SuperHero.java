@@ -2,6 +2,10 @@ package W1.Tutorial_Tasks.src.hero;
 
 import W1.Tutorial_Tasks.src.hero.*;
 
+/**
+ * Provides an implementation for the Abstract Hero Class which several child classes
+ * inherit from.
+ */
 public abstract class SuperHero implements Hero {
     // Define the attributes associated with the SuperHero class
     private String trueIdentity;
