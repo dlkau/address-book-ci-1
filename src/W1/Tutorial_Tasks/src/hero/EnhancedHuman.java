@@ -20,7 +20,7 @@ public class EnhancedHuman extends SuperHero{
      * @param enhancedIdentity the identity the Enhanced Human assumes when they become enhanced.
      * @param acquiredPowers the power they acquire when they are enhanced.
      */
-    public EnhancedHuman(String normalIdentity, String enhancedIdentity, SuperHero[] acquiredPowers){
+    public EnhancedHuman(String normalIdentity, String enhancedIdentity, SuperPower[] acquiredPowers){
         super(normalIdentity, enhancedIdentity);
         // Convert the Array of powers into a HashSet (removes any duplicate powers that may exist in the array)
         this.acquiredPowers = new HashSet<SuperPower>(Arrays.asList(acquiredPowers));

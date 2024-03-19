@@ -1,7 +1,9 @@
 package hero;
 
+import W1.Tutorial_Tasks.src.hero.*;
+
 import java.io.*;
-import static hero.SuperPower.*;
+import static W1.Tutorial_Tasks.src.hero.SuperPower.*;
 
 /* 
  * This program tests the implementation of your "Hero" type hierarchy
@@ -18,7 +20,7 @@ public class HeroTester {
 		/* Declare some 1940s and 1950s superheroes of interest */
 
 		/* Batman and the Black Canary are mere mortals */
-		Human Batman = 
+		Human Batman =
 			new Human("Bruce Wayne", "Batman");
 		Human BlackCanary = 
 			new Human("Dinah Drake", "Black Canary");
