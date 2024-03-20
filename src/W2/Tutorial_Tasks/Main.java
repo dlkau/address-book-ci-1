@@ -84,10 +84,15 @@ public class Main {
         System.out.print("Enter your password: ");
         String password = scanner.nextLine();
         User user = authService.logIn(username, password);
-        System.out.println("Welcome, " + user.getUsername() + "!");
-        // TODO Later: Add the to-do list operations
-        ToDoList userToDoList = new ToDoList(user);
-        userToDoList.run();
+        if (user != null){
+            System.out.println("Welcome, " + user.getUsername() + "!");
+            // TODO Later: Add the to-do list operations
+            ToDoList userToDoList = new ToDoList(user);
+            userToDoList.run();
+        } else {
+            System.out.println("Sorry, you have incorrectly input a username or password.");
+        }
+
     }
 
     /**
