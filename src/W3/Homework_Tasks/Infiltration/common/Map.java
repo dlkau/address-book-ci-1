@@ -72,13 +72,13 @@ public class Map {
         Location topLeft, bottomRight;
         int maxX = Integer.MIN_VALUE, maxY = Integer.MIN_VALUE,
                 minX = Integer.MAX_VALUE, minY = Integer.MAX_VALUE;
-        for (Location location : path){
+        for (Location location : path) {
             int x = location.getX();
             int y = location.getY();
-            maxX = Math.max(start.getX(), target.getX());
-            maxY = Math.max(start.getY(), target.getY());
-            minX = Math.min(start.getX(), target.getX());
-            minY = Math.min(start.getY(), target.getY());
+            maxX = Math.max(maxX, x);
+            maxY = Math.max(maxY, y);
+            minX = Math.min(minX, x);
+            minY = Math.min(minY, y);
         }
         topLeft = new Location(minX - PADDING, minY - PADDING);
         bottomRight = new Location(maxX + PADDING, maxY + PADDING);
@@ -86,11 +86,11 @@ public class Map {
         // Create the map
         // +1 because the bounds are inclusive
         char[][] solvedMap = new char[bottomRight.getY() - topLeft.getY() + 1][bottomRight.getX() - topLeft.getX() + 1];
-        for (int y = topLeft.getY(); y <= bottomRight.getY(); y++){
-            for (int x = topLeft.getX(); x <= bottomRight.getX(); x++){
-                // 1. Check start and target
-                if (path.isLocationInPath(x,y)){
-                    solvedMap[y-topLeft.getY()][x-topLeft.getX()] = path.getSymbolForLocation(x,y);
+        for (int y = topLeft.getY(); y <= bottomRight.getY(); y++) {
+            for (int x = topLeft.getX(); x <= bottomRight.getX(); x++) {
+                // 1. Check location in path
+                if (path.isLocationInPath(x, y)) {
+                    solvedMap[y - topLeft.getY()][x - topLeft.getX()] = path.getSymbolForLocation(x, y);
                     continue;
                 }
                 // 2. Check obstruction
@@ -98,14 +98,15 @@ public class Map {
                 // Calculate the index in the map 2D array
                 int j = y - topLeft.getY();
                 int i = x - topLeft.getX();
-                if (obstructingObstacle != null){
+                if (obstructingObstacle != null) {
                     solvedMap[j][i] = obstructingObstacle.getSymbol();
                     continue;
                 }
-                //3. Empty space
+                // 3. Empty space
                 solvedMap[j][i] = '.';
             }
         }
+        // Convert the map to a string
         return matrixToString(solvedMap);
     }
 
