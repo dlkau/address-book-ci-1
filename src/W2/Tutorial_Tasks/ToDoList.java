@@ -2,6 +2,10 @@ package W2.Tutorial_Tasks;
 
 import java.util.Scanner;
 
+/**
+ * The following class declaration provides the implementation details associated with a
+ * ToDoList object.
+ */
 public class ToDoList {
     private User user;
     private boolean isRunning;
@@ -94,6 +98,8 @@ public class ToDoList {
         Scanner scanner = new Scanner(System.in);
         String description = scanner.nextLine();
         // TODO Now: Set the isDone field of the item at the specified index to true
+        ToDoItem item = new ToDoItem(description);
+        this.user.getToDoItems().add(item);
     }
 
     /**
@@ -105,6 +111,7 @@ public class ToDoList {
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
         // TODO Now: Set the isDone field of the item at the specified index to true
+        this.user.getToDoItems().get(itemNumber).setDoneStatus(true);
     }
 
     /**
@@ -116,6 +123,7 @@ public class ToDoList {
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
         // TODO Now: Set the isDone field of the time at the specified index to false
+        this.user.getToDoItems().get(itemNumber).setDoneStatus(false);
     }
 
     /**
@@ -128,6 +136,7 @@ public class ToDoList {
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
         // TODO Now: Remove the item at the specified index from the user's toDo items list
+        this.user.getToDoItems().remove(itemNumber);
     }
 
     /**
@@ -136,5 +145,4 @@ public class ToDoList {
     public void onExit(){
         isRunning = false;
     }
-
 }
