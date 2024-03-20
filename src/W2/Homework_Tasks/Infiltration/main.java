@@ -11,7 +11,6 @@ public class main {
      -start "(0,0)" -target "(0,10)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
      */
 
-
     public static void main(String[] args){
         HashMap<String, ArrayList<String>> parsedArgs = processCmdArgs(args);
         System.out.println(parsedArgs);
