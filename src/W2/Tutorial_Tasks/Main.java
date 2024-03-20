@@ -7,6 +7,9 @@ public class Main {
     // Static list of users, acting as a database
     private static ArrayList<User> users = new ArrayList<>();
 
+    private static IAuthenticationService authService = new AuthenticationService(users);
+
+    /* // No longer necessary since AuthenticationServices has been created.
     // Mock authentication service that always returns the first user when logged in, and does
     // nothing when signed up
     private static IAuthenticationService authService = new IAuthenticationService() {
@@ -20,6 +23,8 @@ public class Main {
             return users.get(0);
         }
     };
+    */
+     */
     private static boolean isRunning = true;
 
     /**
@@ -81,6 +86,7 @@ public class Main {
         User user = authService.logIn(username, password);
         System.out.println("Welcome, " + user.getUsername() + "!");
         // TODO Later: Add the to-do list operations
+
     }
 
     /**
@@ -93,7 +99,16 @@ public class Main {
         System.out.print("Enter your password: ");
         String password = scanner.nextLine();
         User user = authService.signUp(username, password);
-        //TODO Later: Shows a message based on the result
+        //TODO Later: Shows a message based on the result.
+
+        // - If the user is not null, show "User <username> has been created successfully!"
+        if (user != null){
+            System.out.printf("User %s has been created successfully!\n", username);
+        }
+        // - If the user is null, show "The username is already taken!"
+        else {
+            System.out.println("The username is already taken!");
+        }
     }
 
     /**
