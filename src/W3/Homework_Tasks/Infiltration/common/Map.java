@@ -1,8 +1,8 @@
-package W2.Homework_Tasks.Infiltration.common;
+package W3.Homework_Tasks.Infiltration.common;
 
 // Add necessary library imports
-import W2.Homework_Tasks.Infiltration.common.*;
-import W2.Homework_Tasks.Infiltration.obstacles.Obstacle;
+import W3.Homework_Tasks.Infiltration.obstacles.Obstacle;
+
 import java.util.ArrayList;
 
 /**

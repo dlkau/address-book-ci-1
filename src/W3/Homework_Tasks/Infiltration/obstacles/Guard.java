@@ -1,7 +1,6 @@
-package W2.Homework_Tasks.Infiltration.obstacles;
+package W3.Homework_Tasks.Infiltration.obstacles;
 
-import W2.Homework_Tasks.Infiltration.common.Location;
-import W2.Homework_Tasks.Infiltration.obstacles.ObstacleType;
+import W3.Homework_Tasks.Infiltration.common.Location;
 
 /**
  * This class provides the implementation details for the Guard obstacle.

@@ -1,12 +1,13 @@
-package W2.Homework_Tasks.Infiltration.obstacles;
+package W3.Homework_Tasks.Infiltration.obstacles;
 
 // Add necessary imports
-import W2.Homework_Tasks.Infiltration.common.Location;
+
+import W3.Homework_Tasks.Infiltration.common.Location;
 
 /**
  * Provides the base characteristics of an obstacle that can be located on the map.
  */
-public abstract class LocatableObstacle implements Obstacle{
+public abstract class LocatableObstacle implements Obstacle {
     protected final Location location;
 
     /**

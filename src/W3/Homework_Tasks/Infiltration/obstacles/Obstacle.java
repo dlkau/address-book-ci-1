@@ -1,4 +1,4 @@
-package W2.Homework_Tasks.Infiltration.obstacles;
+package W3.Homework_Tasks.Infiltration.obstacles;
 
 /**
  * This will represent some sort of obstacle that is able to block locations within the map.

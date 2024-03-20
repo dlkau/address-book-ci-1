@@ -1,13 +1,12 @@
-package W2.Homework_Tasks.Infiltration;
+package W3.Homework_Tasks.Infiltration;
 
 // Import necessary libraries
-import W2.Homework_Tasks.Infiltration.common.Location;
-import W2.Homework_Tasks.Infiltration.obstacles.Guard;
-import W2.Homework_Tasks.Infiltration.obstacles.Obstacle;
-import W2.Homework_Tasks.Infiltration.obstacles.ObstacleType;
-import W2.Homework_Tasks.Infiltration.common.Map;
+import W3.Homework_Tasks.Infiltration.common.Location;
+import W3.Homework_Tasks.Infiltration.common.Map;
+import W3.Homework_Tasks.Infiltration.obstacles.Guard;
+import W3.Homework_Tasks.Infiltration.obstacles.Obstacle;
+import W3.Homework_Tasks.Infiltration.obstacles.ObstacleType;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 

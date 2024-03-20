@@ -1,4 +1,4 @@
-package W2.Homework_Tasks.Infiltration.obstacles;
+package W3.Homework_Tasks.Infiltration.obstacles;
 
 /**
  * This enum represents the different types of obstacles that can be assumed on the map.
