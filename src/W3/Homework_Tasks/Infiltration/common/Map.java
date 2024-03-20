@@ -2,6 +2,9 @@ package W3.Homework_Tasks.Infiltration.common;
 
 // Add necessary library imports
 import W3.Homework_Tasks.Infiltration.obstacles.Obstacle;
+import W3.Homework_Tasks.Infiltration.pathFinding.BFSPathFinder;
+import W3.Homework_Tasks.Infiltration.pathFinding.GridPathFinder;
+import W3.Homework_Tasks.Infiltration.pathFinding.Path;
 
 import java.util.ArrayList;
 
@@ -61,13 +64,22 @@ public class Map {
      *         positions respectively.
      */
     public String getSolvedMap(Location start, Location target){
+        // Find the path
+        GridPathFinder pathFinder = new BFSPathFinder(this);
+        Path path = pathFinder.findPath(start, target);
+
         // Define the bounds (including padding) based on the start and target locations
         Location topLeft, bottomRight;
-        int maxX, maxY, minX, minY;
-        maxX = Math.max(start.getX(), target.getX());
-        maxY = Math.max(start.getY(), target.getY());
-        minX = Math.min(start.getX(), target.getX());
-        minY = Math.min(start.getY(), target.getY());
+        int maxX = Integer.MIN_VALUE, maxY = Integer.MIN_VALUE,
+                minX = Integer.MAX_VALUE, minY = Integer.MAX_VALUE;
+        for (Location location : path){
+            int x = location.getX();
+            int y = location.getY();
+            maxX = Math.max(start.getX(), target.getX());
+            maxY = Math.max(start.getY(), target.getY());
+            minX = Math.min(start.getX(), target.getX());
+            minY = Math.min(start.getY(), target.getY());
+        }
         topLeft = new Location(minX - PADDING, minY - PADDING);
         bottomRight = new Location(maxX + PADDING, maxY + PADDING);
 
@@ -77,12 +89,8 @@ public class Map {
         for (int y = topLeft.getY(); y <= bottomRight.getY(); y++){
             for (int x = topLeft.getX(); x <= bottomRight.getX(); x++){
                 // 1. Check start and target
-                if (x == start.getX() && y == start.getY()){
-                    solvedMap[y-topLeft.getY()][x-topLeft.getX()] = 'S';
-                    continue;
-                }
-                if (x == target.getX() && y == target.getY()){
-                    solvedMap[y-topLeft.getY()][x-topLeft.getX()] = 'E';
+                if (path.isLocationInPath(x,y)){
+                    solvedMap[y-topLeft.getY()][x-topLeft.getX()] = path.getSymbolForLocation(x,y);
                     continue;
                 }
                 // 2. Check obstruction
