@@ -1,6 +1,11 @@
 package W2.Homework_Tasks.Infiltration;
 
 // Import necessary libraries
+import W2.Homework_Tasks.Infiltration.obstacles.Guard;
+import W2.Homework_Tasks.Infiltration.obstacles.Obstacle;
+import W2.Homework_Tasks.Infiltration.obstacles.ObstacleType;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -35,4 +40,36 @@ public class main {
         }
         return parsedArgs;
     }
+
+    /**
+     * This method will strip the parentheses from a given argument.
+     * @param arg the argument with the parentheses to strip.
+     * @return the argument without parentheses.
+     */
+    public static String stripParentheses(String arg){
+        return arg.substring(1,arg.length() -1);
+    }
+
+    /**
+     * This method parses the arguments which were parsed via the command line arguments.
+     * @param parsedArgs the arguments to be parsed.
+     * @return A ArrayList of generated obstacles.
+     */
+    public static ArrayList<Obstacle> parseObstacles(HashMap<String, ArrayList<String>> parsedArgs){
+        ArrayList<Obstacle> obstacles = new ArrayList<>();
+        ObstacleType type = ObstacleType.GUARD;
+        String key = "-" + type.getArgumentName();
+        ArrayList<String> args = parsedArgs.get(key);
+        if (args == null){
+            return obstacles;
+        }
+        for (String arg : args){
+            // Remove the parentheses from the current argument
+            String cleanedString = stripParentheses(arg);
+            Obstacle obstacle = Guard.parse(cleanedString);
+            obstacles.add(obstacle);
+        }
+        return obstacles;
+    }
+
 }
