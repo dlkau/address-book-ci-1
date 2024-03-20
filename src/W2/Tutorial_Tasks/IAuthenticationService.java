@@ -1,2 +1,4 @@
-package W2.Tutorial_Tasks;public interface IAuthenticationService {
+package W2.Tutorial_Tasks;
+
+public interface IAuthenticationService {
 }
