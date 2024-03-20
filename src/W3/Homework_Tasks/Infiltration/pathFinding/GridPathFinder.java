@@ -20,5 +20,5 @@ public interface GridPathFinder {
      * @param location the location which the neighbours need to sought from.
      * @return the neighbours of a given location.
      */
-    Iterable<Location> getNeighbors(Location location)
+    Iterable<Location> getNeighbors(Location location);
 }

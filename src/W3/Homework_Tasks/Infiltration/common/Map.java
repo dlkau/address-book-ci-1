@@ -100,4 +100,14 @@ public class Map {
         }
         return matrixToString(solvedMap);
     }
+
+    /**
+     * Returns a Boolean value based on whether a given location is obstructed by an obstacle or not.
+     * @param x the x coordinate of the location.
+     * @param y the y coordinate of the location.
+     * @return this returns true if the provided location is obstructed by an obstacle, otherwise it returns false.
+     */
+    public boolean isLocationObstructed(int x, int y){
+        return getObstacleAtLocation(x, y) != null;
+    }
 }
