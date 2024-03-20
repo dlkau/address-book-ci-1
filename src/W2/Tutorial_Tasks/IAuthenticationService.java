@@ -1,4 +1,6 @@
 package W2.Tutorial_Tasks;
 
 public interface IAuthenticationService {
+    User signUp(String username, String password);
+    User logIn(String username, String password);
 }
