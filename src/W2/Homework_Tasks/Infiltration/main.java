@@ -1,24 +1,41 @@
 package W2.Homework_Tasks.Infiltration;
 
 // Import necessary libraries
+import W2.Homework_Tasks.Infiltration.common.Location;
 import W2.Homework_Tasks.Infiltration.obstacles.Guard;
 import W2.Homework_Tasks.Infiltration.obstacles.Obstacle;
 import W2.Homework_Tasks.Infiltration.obstacles.ObstacleType;
+import W2.Homework_Tasks.Infiltration.common.Map;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
+
 
 public class main {
 
     /*
      This is the command line argument which was parsed into the processCmdArgs method:
      -start "(0,0)" -target "(0,10)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
+     -start "(3,2)" -target "(189,8)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
+     -start "(3,2)" -target "(6,2)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
      */
 
     public static void main(String[] args){
+        // Parse the command line arguments into obstacles and create a map with those obstacles
         HashMap<String, ArrayList<String>> parsedArgs = processCmdArgs(args);
-        System.out.println(parsedArgs);
+        ArrayList<Obstacle> obstacles = parseObstacles(parsedArgs);
+        Map map = new Map(obstacles);
+
+        // Parse the start and target locations
+        String startArg = stripParentheses(parsedArgs.get("-start").get(0));
+        String targetArg = stripParentheses(parsedArgs.get("-target").get(0));
+        Location start = Location.parse(startArg);
+        Location target = Location.parse(targetArg);
+
+        // Show the map
+        System.out.println(map.getSolvedMap(start, target));
+        // System.out.println(parsedArgs);
     }
 
     /**
