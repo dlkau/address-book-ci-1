@@ -24,7 +24,7 @@ public class Main {
         }
     };
     */
-     */
+
     private static boolean isRunning = true;
 
     /**
@@ -117,5 +117,4 @@ public class Main {
     public static void onExit(){
         isRunning = false;
     }
-
 }
