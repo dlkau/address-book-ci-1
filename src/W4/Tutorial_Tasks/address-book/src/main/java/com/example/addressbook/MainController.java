@@ -5,6 +5,9 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+
+import java.util.List;
 
 public class MainController {
     @FXML
@@ -19,6 +22,8 @@ public class MainController {
     private TextField emailTextField;
     @FXML
     private TextField phoneTextField;
+    @FXML
+    private VBox contactContainer;
 
     public MainController(){
         contactDAO = new MockContactDAO();
@@ -78,7 +83,13 @@ public class MainController {
      */
     private void syncContacts(){
         contactsListView.getItems().clear();
-        contactsListView.getItems().addAll(contactDAO.getAllContacts());
+        List<Contact> contacts = contactDAO.getAllContacts();
+        boolean hasContact = !contacts.isEmpty();
+        if (hasContact){
+            contactsListView.getItems().addAll(contacts);
+        }
+        // Show / hide based on whether there are contacts
+        contactContainer.setVisible(hasContact);
     }
 
     /**
@@ -145,11 +156,15 @@ public class MainController {
         }
     }
 
-
-
     @FXML
     public void initialize(){
         contactsListView.setCellFactory(this::renderCell);
+        syncContacts();
+        // Select the first contact and display its information
         contactsListView.getItems().addAll(contactDAO.getAllContacts());
+        Contact firstContact = contactsListView.getSelectionModel().getSelectedItem();
+        if (firstContact != null){
+            selectContact(firstContact);
+        }
     }
 }
