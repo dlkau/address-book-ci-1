@@ -60,4 +60,10 @@ Elementum nibh tellus molestie nunc non blandit massa.""");
         stage.setScene(scene);
     }
 
+    @FXML
+    protected void onCancelButtonClick(){
+        Stage stage = (Stage) nextButton.getScene().getWindow();
+        stage.close();
+    }
+
 }
