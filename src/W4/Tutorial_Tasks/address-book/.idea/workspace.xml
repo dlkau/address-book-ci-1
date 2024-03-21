@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abe413f5-fc0c-44fa-b821-2693016f0da4" name="Changes" comment="" />
+    <list default="true" id="ebb1999f-8c06-4497-ab79-0200a77d2d10" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addressbook/HelloApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/addressbook/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/addressbook/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Reading_Tasks/javafx-reading-demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Reading_Tasks/javafx-reading-demo/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,9 +35,9 @@
     </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
+  "associatedIndex": 8
 }]]></component>
-  <component name="ProjectId" id="2dyVaBmi8LApu1UVCk8y5yvFhzT" />
+  <component name="ProjectId" id="2dyc4A8X3wBQxkZhndNGDFMVH1s" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -40,11 +54,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="abe413f5-fc0c-44fa-b821-2693016f0da4" name="Changes" comment="" />
-      <created>1710980368858</created>
+      <changelist id="ebb1999f-8c06-4497-ab79-0200a77d2d10" name="Changes" comment="" />
+      <created>1710983567977</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1710980368858</updated>
+      <updated>1710983567977</updated>
     </task>
     <servers />
   </component>
