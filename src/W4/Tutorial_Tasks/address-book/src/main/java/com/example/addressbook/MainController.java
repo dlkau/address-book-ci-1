@@ -10,6 +10,8 @@ public class MainController {
     private IContactDAO contactDAO;
     public MainController(){
         contactDAO = new MockContactDAO();
+        contactDAO.addContact(new Contact("Jerry", "Doe", "jerrydoe@example.com",
+                "0423423426"));
     }
 
     /**
