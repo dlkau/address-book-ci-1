@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abe413f5-fc0c-44fa-b821-2693016f0da4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/javafxreadingdemo/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javafxreadingdemo/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javafxreadingdemo/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
