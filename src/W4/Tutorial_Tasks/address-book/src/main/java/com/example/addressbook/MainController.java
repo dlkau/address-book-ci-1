@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 public class MainController {
     @FXML
@@ -26,6 +27,19 @@ public class MainController {
     }
 
     /**
+     * This method selects the contact in the list view and updates the text fields
+     * with the contact's information.
+     * @param contact the contact which was selected.
+     */
+    private void selectContact(Contact contact){
+        contactsListView.getSelectionModel().select(contact);
+        firstNameTextField.setText(contact.getFirstName());
+        lastNameTextField.setText(contact.getLastName());
+        emailTextField.setText(contact.getEmail());
+        phoneTextField.setText(contact.getPhone());
+    }
+
+    /**
      * This method renders a cell in the contacts list view by setting the text to
      * the contact's full name.
      * @param contactListView this is the list view to render the cell for.
@@ -33,6 +47,13 @@ public class MainController {
      */
     private ListCell<Contact> renderCell(ListView<Contact> contactListView){
         return new ListCell<>(){
+            private void onContactSelected(MouseEvent mouseEvent){
+                ListCell<Contact> clickedCell = (ListCell<Contact>) mouseEvent.getSource();
+                // Get the selected contact from the list view
+                Contact selectedContact = clickedCell.getItem();
+                if (selectedContact != null) selectContact(selectedContact);
+            }
+
             /**
              * Updates the item in the cell by setting the text to the contact's full name.
              * @param contact the contact to update the cell with
@@ -44,6 +65,7 @@ public class MainController {
                 // If the cell is empty, set the text to null, otherwise set it to the contacts full name
                 if (empty || contact == null || contact.getFullName() == null){
                     setText(null);
+                    super.setOnMouseClicked(this::onContactSelected);
                 } else {
                     setText(contact.getFullName());
                 }
