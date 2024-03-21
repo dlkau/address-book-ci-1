@@ -23,6 +23,7 @@ public class main {
      -start "(0,0)" -target "(0,10)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
      // This command line argument will be used to see if the wall implementation worked
      -start (0,7) -target (7,2) -w (2,2,6,8)
+     // This command line argument will be used to see if the laser implementation worked
      */
 
     public static void main(String[] args){
@@ -93,6 +94,7 @@ public class main {
                     case SENSOR -> Sensor.parse(cleanedArg);
                     case CAMERA -> Camera.parse(cleanedArg);
                     case WALL -> Wall.parse(cleanedArg);
+                    case LASER -> Laser.parse(cleanedArg);
                 };
                 obstacles.add(obstacle);
             }
