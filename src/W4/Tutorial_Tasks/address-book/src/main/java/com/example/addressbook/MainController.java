@@ -132,6 +132,19 @@ public class MainController {
         firstNameTextField.requestFocus();
     }
 
+    /**
+     * This method is used to handle cases where the user selects the cancel button.
+     */
+    @FXML
+    private void onCancel(){
+        // Find the selected contact
+        Contact selectedContact = contactsListView.getSelectionModel().getSelectedItem();
+        if (selectedContact != null){
+            // Since the contact has not been modified, we can just re-select it ot refresh the text fields
+            selectContact(selectedContact);
+        }
+    }
+
 
 
     @FXML
