@@ -12,6 +12,12 @@ public class MainController {
         contactDAO = new MockContactDAO();
     }
 
+    /**
+     * This method renders a cell in the contacts list view by setting the text to
+     * the contact's full name.
+     * @param contactListView this is the list view to render the cell for.
+     * @return the rendered cell.
+     */
     private ListCell<Contact> renderCell(ListView<Contact> contactListView){
         return new ListCell<>(){
             /**
@@ -31,6 +37,15 @@ public class MainController {
             }
         };
     }
+
+    /**
+     * This method synchronizes the contacts list view with the contacts in the database.
+     */
+    private void syncContacts(){
+        contactsListView.getItems().clear();
+        contactsListView.getItems().addAll(contactDAO.getAllContacts());
+    }
+
     @FXML
     public void initialize(){
         contactsListView.setCellFactory(this::renderCell);
