@@ -29,6 +29,4 @@ you can use the application" wrapText="true"/>
             onAction="#onNextButtonClick"
             disable="true"/>
   </HBox>
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>
