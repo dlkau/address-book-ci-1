@@ -21,6 +21,8 @@ public class main {
      -start "(3,2)" -target "(189,8)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
      -start "(3,2)" -target "(6,2)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
      -start "(0,0)" -target "(0,10)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
+     // This command line argument will be used to see if the wall implementation worked
+     -start (0,7) -target (7,2) -w (2,2,6,8)
      */
 
     public static void main(String[] args){
@@ -90,6 +92,7 @@ public class main {
                     case FENCE -> Fence.parse(cleanedArg);
                     case SENSOR -> Sensor.parse(cleanedArg);
                     case CAMERA -> Camera.parse(cleanedArg);
+                    case WALL -> Wall.parse(cleanedArg);
                 };
                 obstacles.add(obstacle);
             }
