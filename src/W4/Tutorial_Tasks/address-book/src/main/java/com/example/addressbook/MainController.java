@@ -99,6 +99,19 @@ public class MainController {
         }
     }
 
+    /**
+     * This method is used to delete a contact from the database.
+     */
+    @FXML
+    private void onDelete(){
+        // Get the selected contact from the list view
+        Contact selectedContact = contactsListView.getSelectionModel().getSelectedItem();
+        if (selectedContact != null){
+            contactDAO.deleteContact(selectedContact);
+            syncContacts();
+        }
+    }
+
     @FXML
     public void initialize(){
         contactsListView.setCellFactory(this::renderCell);
