@@ -81,6 +81,24 @@ public class MainController {
         contactsListView.getItems().addAll(contactDAO.getAllContacts());
     }
 
+    /**
+     * This method updates the given contact with the information provided in each of the
+     * text boxes.
+     */
+    @FXML
+    private void onEditConfirm(){
+        // Get the selected contact from the list view
+        Contact selectedContact = contactsListView.getSelectionModel().getSelectedItem();
+        if(selectedContact != null){
+            selectedContact.setFirstname(firstNameTextField.getText());
+            selectedContact.setLastName(lastNameTextField.getText());
+            selectedContact.setEmail(emailTextField.getText());
+            selectedContact.setPhone(phoneTextField.getText());
+            contactDAO.updateContact(selectedContact);
+            syncContacts();
+        }
+    }
+
     @FXML
     public void initialize(){
         contactsListView.setCellFactory(this::renderCell);
