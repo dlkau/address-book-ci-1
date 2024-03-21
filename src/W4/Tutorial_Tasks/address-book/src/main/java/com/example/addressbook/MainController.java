@@ -81,12 +81,18 @@ public class MainController {
     /**
      * This method synchronizes the contacts list view with the contacts in the database.
      */
-    private void syncContacts(){
+    private void syncContacts() {
+        Contact currentContact = contactsListView.getSelectionModel().getSelectedItem();
         contactsListView.getItems().clear();
         List<Contact> contacts = contactDAO.getAllContacts();
         boolean hasContact = !contacts.isEmpty();
-        if (hasContact){
+        if (hasContact) {
             contactsListView.getItems().addAll(contacts);
+            // If the current contact is still in the list, re-select it
+            // Otherwise, select the first contact in the list
+            Contact nextContact = contacts.contains(currentContact) ? currentContact : contacts.get(0);
+            contactsListView.getSelectionModel().select(nextContact);
+            selectContact(nextContact);
         }
         // Show / hide based on whether there are contacts
         contactContainer.setVisible(hasContact);
@@ -161,7 +167,7 @@ public class MainController {
         contactsListView.setCellFactory(this::renderCell);
         syncContacts();
         // Select the first contact and display its information
-        contactsListView.getItems().addAll(contactDAO.getAllContacts());
+        contactsListView.getSelectionModel().selectFirst();
         Contact firstContact = contactsListView.getSelectionModel().getSelectedItem();
         if (firstContact != null){
             selectContact(firstContact);
