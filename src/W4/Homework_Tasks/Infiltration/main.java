@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class main {
 
-    /*
+     /*
      This is the command line argument which was parsed into the processCmdArgs method:
      -start "(0,0)" -target "(0,10)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
      -start "(3,2)" -target "(189,8)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
@@ -24,6 +24,13 @@ public class main {
      // This command line argument will be used to see if the wall implementation worked
      -start (0,7) -target (7,2) -w (2,2,6,8)
      // This command line argument will be used to see if the laser implementation worked
+     -start (0,1) -target (10,5) -l (1,1,n)
+
+     // This command line argument will see if the DepthFirst implementation worked
+     -start (0,7) -target (7,2) -w (2,2,6,8)
+     -start (0,1) -target (10,5) -l (1,1,n)
+     -start "(0,0)" -target "(0,10)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -c "(0,6,e)"
+     -start "(0,0)" -target "(4,10)" -s "(0,5,3.5)
      */
 
     public static void main(String[] args){

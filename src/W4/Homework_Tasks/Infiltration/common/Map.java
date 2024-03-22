@@ -3,6 +3,7 @@ package W4.Homework_Tasks.Infiltration.common;
 // Add necessary library imports
 import W4.Homework_Tasks.Infiltration.obstacles.Obstacle;
 import W4.Homework_Tasks.Infiltration.pathFinding.BFSPathFinder;
+import W4.Homework_Tasks.Infiltration.pathFinding.DepthFirstPathFinder;
 import W4.Homework_Tasks.Infiltration.pathFinding.GridPathFinder;
 import W4.Homework_Tasks.Infiltration.pathFinding.Path;
 
@@ -66,6 +67,7 @@ public class Map {
     public String getSolvedMap(Location start, Location target){
         // Find the path
         GridPathFinder pathFinder = new BFSPathFinder(this);
+        // GridPathFinder pathFinder = new DepthFirstPathFinder(this);
         Path path = pathFinder.findPath(start, target);
 
         // Define the bounds (including padding) based on the start and target locations
