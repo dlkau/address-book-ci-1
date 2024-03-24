@@ -19,35 +19,39 @@ public class DepthFirstPathFinder  implements GridPathFinder {
     }
 
     /**
-     * This method finds the path from the start location to the end location.
+     * This method finds the path from the start location to the end location using the depth first search implementation.
+     * This search algorithm uses a LIFO structure to store the frontiers it comes across in the tree.
      * @param startLocation the start location.
      * @param endLocation the end location.
      * @return a Path from the initial location to the end location.
      */
     @Override
     public Path findPath(Location startLocation, Location endLocation){
+        // Implement the LIFO data structure
         Stack<Location> stack = new Stack<>();
-        ArrayList<Location> visited = new ArrayList<>();
+        // Store the nodes that have been visited
+        ArrayList<Location> visitedNodes = new ArrayList<>();
         HashMap<Location, Location> previous = new HashMap<>();
-
+        // Testing whether the bounds are set correctly
         //System.out.printf("%d, %d, %d, %d\n", (Math.max(startLocation.getX(), endLocation.getX()) + 2), (Math.min(startLocation.getX(), endLocation.getX()) - 2),(Math.min(startLocation.getY(), endLocation.getY()) -2), (Math.max(startLocation.getY(), endLocation.getY()) + 2));
-        // Breadth-first search
+        // depthFirstSearch
         stack.push(startLocation);
         while (!stack.isEmpty()){
             Location current = stack.pop();
             if (current.equals(endLocation)){
                 break;
             }
-            if (!visited.contains(current)){
-                visited.add(current);
+            if (!visitedNodes.contains(current)){
+                visitedNodes.add(current);
                 //System.out.printf("%d, %d\n", current.getX(), current.getY());
+                // Ensures the depth first search algorithm doesn't continue to search outside the map
                 if((current.getX() <= Math.max(startLocation.getX(), endLocation.getX()) + 2) &&
                         (current.getX() >= Math.min(startLocation.getX(), endLocation.getX()) - 2) &&
                         (current.getY() >= Math.min(startLocation.getY(), endLocation.getY()) -2) &&
                         (current.getY() <= Math.max(startLocation.getY(), endLocation.getY()) + 2)){
                     Iterable<Location> neighbors = getNeighbors(current);
                     for (Location neighbor : neighbors){
-                        if(!visited.contains(neighbor)){
+                        if(!visitedNodes.contains(neighbor)){
                             previous.put(neighbor, current);
                             stack.push(neighbor);
                         }
@@ -56,7 +60,7 @@ public class DepthFirstPathFinder  implements GridPathFinder {
             }
         }
 
-        // Backtrack from the end location to find the path
+        // Generate a path from the end location
         List<Location> path = new Stack<>();
         Location current = endLocation;
         while (previous.containsKey(current)){
@@ -64,11 +68,11 @@ public class DepthFirstPathFinder  implements GridPathFinder {
             current = previous.get(current);
         }
         path.add(startLocation);
-        // Reverse the path so that it goes from the start location to the end location
+        // Make sure the path goes from start to end
         Collections.reverse(path);
         return new Path(path);
     }
-    
+
     /**
      * This method will retrieve all the neighbours from a given location
      *

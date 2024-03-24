@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class main {
 
-    /*
+     /*
      This is the command line argument which was parsed into the processCmdArgs method:
      -start "(0,0)" -target "(0,10)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"
      -start "(3,2)" -target "(189,8)" -g "(0,1)" "(0,2)" "(0,3)" -f "(0,4,0,8)" -s "(0,5,3.5)" -c "(0,6,e)"

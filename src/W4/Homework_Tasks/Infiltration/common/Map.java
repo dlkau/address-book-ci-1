@@ -66,8 +66,9 @@ public class Map {
      */
     public String getSolvedMap(Location start, Location target){
         // Find the path
-        GridPathFinder pathFinder = new BFSPathFinder(this);
-//        GridPathFinder pathFinder = new DepthFirstPathFinder(this);
+//        GridPathFinder pathFinder = new BFSPathFinder(this);
+         GridPathFinder pathFinder = new DepthFirstPathFinder(this);
+
         Path path = pathFinder.findPath(start, target);
 
         // Define the bounds (including padding) based on the start and target locations
