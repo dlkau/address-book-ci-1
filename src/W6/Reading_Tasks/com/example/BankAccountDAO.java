@@ -49,6 +49,7 @@ public class BankAccountDAO {
             insertAccount.setString(1, bankAccount.getFirstName());
             insertAccount.setString(2, bankAccount.getLastName());
             insertAccount.setInt(3, bankAccount.getBankBalance());
+            insertAccount.execute();
         } catch (SQLException ex) {
             System.err.println(ex);
         }
