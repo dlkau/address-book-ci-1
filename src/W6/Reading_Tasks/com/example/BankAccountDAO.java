@@ -75,8 +75,18 @@ public class BankAccountDAO {
         }
     }
 
+    /**
+     * This method, given a bank account id, will delete a given bank account record.
+     * @param id the id of the BankAccount record to be deleted.
+     */
     public void delete(int id){
-        // ToDo Later: Create a PreparedStatement to run the DELETE query
+        try {
+            PreparedStatement deleteAccount = connection.prepareStatement("DELETE FROM bankAccounts WHERE id = ?");
+            deleteAccount.setInt(1, id);
+            deleteAccount.execute();
+        } catch (SQLException ex){
+            System.err.println(ex);
+        }
     }
 
     /**
