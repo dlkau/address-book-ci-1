@@ -37,8 +37,21 @@ public class BankAccountDAO {
         }
     }
 
+    /**
+     * This method is used to insert a new BankAccount record into the bankAccounts table.
+     * @param bankAccount the bank account to be inserted.
+     */
     public void insert(BankAccount bankAccount){
-        // ToDo Later: Create a PreparedStatement to run the INSERT query
+        try {
+            PreparedStatement insertAccount = connection.prepareStatement(
+                    "INSERT INTO bankAccounts (firstName, bankBalance) values (?, ?, ?)"
+            );
+            insertAccount.setString(1, bankAccount.getFirstName());
+            insertAccount.setString(2, bankAccount.getLastName());
+            insertAccount.setInt(3, bankAccount.getBankBalance());
+        } catch (SQLException ex) {
+            System.err.println(ex);
+        }
     }
 
     public void update(BankAccount bankAccount){
