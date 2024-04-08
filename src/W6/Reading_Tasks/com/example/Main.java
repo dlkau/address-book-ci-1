@@ -28,6 +28,13 @@ public class Main {
         BankAccount account = bankAccountDAO.GetById(2);
         System.out.println(account);
 
+        // Update a record
+        account.SetBankBalance(25000);
+        bankAccountDAO.update(account);
+        System.out.println("After update to balance to 25000:");
+        System.out.println(bankAccountDAO.GetById(2));
+
+
         bankAccountDAO.close();
     }
 }

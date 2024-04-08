@@ -63,7 +63,7 @@ public class BankAccountDAO {
     public void update(BankAccount bankAccount){
         try{
             PreparedStatement updateAccount = connection.prepareStatement(
-                    "UPDATE bankAccount SET firstName = ?, lastName = ?, bankBalance = ?, WHERE id = ?"
+                    "UPDATE bankAccounts SET firstName = ?, lastName = ?, bankBalance = ? WHERE id = ?"
             );
             updateAccount.setString(1, bankAccount.getFirstName());
             updateAccount.setString(2, bankAccount.getLastName());
