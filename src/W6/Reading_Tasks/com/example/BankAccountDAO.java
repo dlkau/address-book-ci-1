@@ -44,7 +44,7 @@ public class BankAccountDAO {
     public void insert(BankAccount bankAccount){
         try {
             PreparedStatement insertAccount = connection.prepareStatement(
-                    "INSERT INTO bankAccounts (firstName, bankBalance) values (?, ?, ?)"
+                    "INSERT INTO bankAccounts (firstName, lastName, bankBalance) values (?, ?, ?)"
             );
             insertAccount.setString(1, bankAccount.getFirstName());
             insertAccount.setString(2, bankAccount.getLastName());

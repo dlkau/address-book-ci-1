@@ -12,6 +12,11 @@ public class Main {
         BankAccountDAO bankAccountDAO = new BankAccountDAO();
         bankAccountDAO.CreateTable();
 
+        // Insert some new records
+        bankAccountDAO.insert(new BankAccount("John", "Doe", 10000));
+        bankAccountDAO.insert(new BankAccount("Jane", "Doe", 20000));
+        bankAccountDAO.insert(new BankAccount("Alice", "Smith", 30000));
+
         bankAccountDAO.close();
     }
 }
