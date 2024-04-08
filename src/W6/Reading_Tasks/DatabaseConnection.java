@@ -21,9 +21,7 @@ public class DatabaseConnection {
             instance = DriverManager.getConnection(url);
         } catch (SQLException sqlEx) {
             System.err.println(sqlEx);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        } 
     }
 
     public static Connection getInstance() {
