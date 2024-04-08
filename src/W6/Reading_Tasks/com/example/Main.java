@@ -25,15 +25,25 @@ public class Main {
         // }
 
         // Retrieve a record by ID
-        BankAccount account = bankAccountDAO.GetById(2);
-        System.out.println(account);
+        // BankAccount account = bankAccountDAO.GetById(2);
+        // System.out.println(account);
 
         // Update a record
-        account.SetBankBalance(25000);
-        bankAccountDAO.update(account);
-        System.out.println("After update to balance to 25000:");
-        System.out.println(bankAccountDAO.GetById(2));
+        // account.SetBankBalance(25000);
+        // bankAccountDAO.update(account);
+        // System.out.println("After update to balance to 25000:");
+        // System.out.println(bankAccountDAO.GetById(2));
 
+        // Delete a record
+        System.out.println("Before deleting record with id = 1:");
+        for (BankAccount acc : bankAccountDAO.getAll()){
+            System.out.println(acc);
+        }
+        bankAccountDAO.delete(1);
+        System.out.println("After deleting record with id = 1:");
+        for (BankAccount acc : bankAccountDAO.getAll()){
+            System.out.println(acc);
+        }
 
         bankAccountDAO.close();
     }
