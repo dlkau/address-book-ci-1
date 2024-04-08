@@ -9,5 +9,9 @@ public class Main {
     public static void main(String[] args){
         // Instantiate the connection to the database
         Connection connection = DatabaseConnection.getInstance();
+        BankAccountDAO bankAccountDAO = new BankAccountDAO();
+        bankAccountDAO.CreateTable();
+
+        bankAccountDAO.close();
     }
 }
