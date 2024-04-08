@@ -18,8 +18,23 @@ public class BankAccountDAO {
         connection = DatabaseConnection.getInstance();
     }
 
+    /**
+     * This method is used to create a BankAccount table.
+     */
     public void CreateTable(){
-        // ToDo Later: Create a Statement to run the CREATE TABLE query
+        try {
+            Statement createTable = connection.createStatement();
+            createTable.execute(
+                    "CREATE TABLE IF NOT EXISTS bankAccounts ("
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                    + "firstName VARCHAR NOT NULL, "
+                    + "lastName VARCHAR NOT NULL, "
+                    + "bankBalance INTEGER NOT NULL"
+                    + ")"
+            );
+        } catch (SQLException ex) {
+            System.err.println(ex);
+        }
     }
 
     public void insert(BankAccount bankAccount){
