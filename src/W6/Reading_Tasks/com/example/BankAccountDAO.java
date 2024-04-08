@@ -64,6 +64,10 @@ public class BankAccountDAO {
         // ToDo Later: Create a PreparedStatement to run the DELETE query
     }
 
+    /**
+     * This method is used to return a list of BankAccounts from the database.
+     * @return a list of the bankAccount objects based on the records from the bankAccounts table
+     */
     public List<BankAccount> getAll(){
         List<BankAccount> accounts = new ArrayList<>();
         try {
