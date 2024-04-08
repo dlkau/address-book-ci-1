@@ -89,8 +89,27 @@ public class BankAccountDAO {
         return accounts;
     }
 
+    /**
+     * This method, given a certain id, will return a BankAccount object attached to it.
+     * @param id the id of the bankAccount to be retrieved.
+     * @return a BankAccount object for the given id.
+     */
     public BankAccount GetById(int id){
-        // ToDo Later: Create a PreparedStatement ot urn the conditional SELECT query
+        try{
+            PreparedStatement getAccount = connection.prepareStatement("SELECT * FROM bankAccounts WHERE id = ?");
+            getAccount.setInt(1, id);
+            ResultSet rs = getAccount.executeQuery();
+            if(rs.next()){
+                return new BankAccount(
+                        rs.getInt("id"),
+                        rs.getString("firstName"),
+                        rs.getString("lastName"),
+                        rs.getInt("bankBalance")
+                );
+            }
+        } catch (SQLException ex){
+            System.err.println(ex);
+        }
         return null;
     }
 
