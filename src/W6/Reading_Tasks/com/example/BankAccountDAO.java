@@ -56,8 +56,23 @@ public class BankAccountDAO {
         }
     }
 
+    /**
+     * This method, given a bankAccount object, will update the corresponding value in the database.
+     * @param bankAccount the bank account to be updated.
+     */
     public void update(BankAccount bankAccount){
-        // ToDo Later: Create a PreparedStatement to run the UPDATE query
+        try{
+            PreparedStatement updateAccount = connection.prepareStatement(
+                    "UPDATE bankAccount SET firstName = ?, lastName = ?, bankBalance = ?, WHERE id = ?"
+            );
+            updateAccount.setString(1, bankAccount.getFirstName());
+            updateAccount.setString(2, bankAccount.getLastName());
+            updateAccount.setInt(3, bankAccount.getBankBalance());
+            updateAccount.setInt(4, bankAccount.getId());
+            updateAccount.execute();
+        } catch (SQLException ex){
+            System.err.println(ex);
+        }
     }
 
     public void delete(int id){
