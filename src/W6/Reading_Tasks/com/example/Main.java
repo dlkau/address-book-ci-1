@@ -19,11 +19,14 @@ public class Main {
         // bankAccountDAO.insert(new BankAccount("Alice", "Smith", 30000));
 
         // Retrieve all the records from the bankAccount details
-        List<BankAccount> accounts = bankAccountDAO.getAll();
-        for (BankAccount acc : accounts){
-            System.out.println(acc);
-        }
+        // List<BankAccount> accounts = bankAccountDAO.getAll();
+        // for (BankAccount acc : accounts){
+        //     System.out.println(acc);
+        // }
 
+        // Retrieve a record by ID
+        BankAccount account = bankAccountDAO.GetById(2);
+        System.out.println(account);
 
         bankAccountDAO.close();
     }
