@@ -1,7 +1,6 @@
-package W6.Reading_Tasks;
+package W6.Reading_Tasks.com.example;
 
 // Add necessary java imports
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -21,7 +20,7 @@ public class DatabaseConnection {
             instance = DriverManager.getConnection(url);
         } catch (SQLException sqlEx) {
             System.err.println(sqlEx);
-        } 
+        }
     }
 
     public static Connection getInstance() {
