@@ -1,6 +1,7 @@
 package W6.Reading_Tasks.com.example;
 
 // Add necessary imports
+import javax.swing.plaf.nimbus.State;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +66,22 @@ public class BankAccountDAO {
 
     public List<BankAccount> getAll(){
         List<BankAccount> accounts = new ArrayList<>();
-        // ToDO Later: Create a Statement to run the SELECT * query and populate the accoutns list above
+        try {
+            Statement getAll = connection.createStatement();
+            ResultSet rs = getAll.executeQuery("SELECT * FROM bankAccounts");
+            while(rs.next()){
+                accounts.add(
+                        new BankAccount(
+                                rs.getInt("id"),
+                                rs.getString("firstName"),
+                                rs.getString("lastName"),
+                                rs.getInt("bankBalance")
+                        )
+                );
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex);
+        }
         return accounts;
     }
 
