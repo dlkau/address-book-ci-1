@@ -11,6 +11,8 @@ public class SqliteContactDao implements IContactDAO {
     public SqliteContactDao(){
         connection = SqliteConnection.getInstance();
         createTable();
+        // Used for testing, to be removed later
+        insertSampleData();
     }
 
     /**
@@ -29,6 +31,26 @@ public class SqliteContactDao implements IContactDAO {
                     + "email VARCHAR NOT NULL,"
                     + ")";
             statement.execute(query);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * This method, for the purposes of testing, inserts three records into the contacts table.
+     */
+    private void insertSampleData(){
+        try {
+            // Clear before inserting
+            Statement clearStatement = connection.createStatement();
+            String clearQuery = "DELETE FROM contacts";
+            clearStatement.execute(clearQuery);
+            Statement insertStatment = connection.createStatement();
+            String insertQuery = "INSERT INTO contacts (firstName, lastName, phone, email) VALUES "
+                    + "('John', 'Doe', '0423423423', 'johndoe@example.com'),"
+                    + "('Jane', 'Doe', '0423423424', 'janedoe@example.com'),"
+                    + "('Jay', 'Doe', '04230423425', 'jaydoe@example.com')";
+            insertStatment.execute(insertQuery);
         } catch (Exception e){
             e.printStackTrace();
         }
