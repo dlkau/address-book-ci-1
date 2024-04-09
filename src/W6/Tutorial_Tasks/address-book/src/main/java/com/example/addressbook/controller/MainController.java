@@ -178,8 +178,6 @@ public class MainController {
     private void search(){
         List<Contact> contacts = contactDAO.getAllContacts();
         for (Contact contact : contacts ) {
-            System.out.println(contact.getFirstName());
-            System.out.println(searchFirstNameTextField.getText());
             if (contact.getFirstName().equals(searchFirstNameTextField.getText()) &&
                     contact.getLastName().equals(searchLastNameTextField.getText())) {
                 String contactDetails = "Name: " + contact.getFirstName() + " " + contact.getLastName() +
