@@ -4,6 +4,7 @@ import com.example.addressbook.model.Contact;
 import com.example.addressbook.model.IContactDAO;
 import com.example.addressbook.model.SqliteContactDAO;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -27,6 +28,12 @@ public class MainController {
     private TextField phoneTextField;
     @FXML
     private VBox contactContainer;
+    @FXML
+    private Label res;
+    @FXML
+    TextField searchFirstNameTextField;
+    @FXML
+    TextField searchLastNameTextField;
 
     public MainController(){
         contactDAO = new SqliteContactDAO();
@@ -161,6 +168,27 @@ public class MainController {
             // Since the contact has not been modified, we can just re-select it ot refresh the text fields
             selectContact(selectedContact);
         }
+    }
+
+    /**
+     * This search method, when invoked, will retrieve all the details about a contact based on their first and last
+     * name.
+     */
+    @FXML
+    private void search(){
+        List<Contact> contacts = contactDAO.getAllContacts();
+        for (Contact contact : contacts ) {
+            System.out.println(contact.getFirstName());
+            System.out.println(searchFirstNameTextField.getText());
+            if (contact.getFirstName().equals(searchFirstNameTextField.getText()) &&
+                    contact.getLastName().equals(searchLastNameTextField.getText())) {
+                String contactDetails = "Name: " + contact.getFirstName() + " " + contact.getLastName() +
+                        "\n" + "Phone Number: " + contact.getPhone() + "\n" + "Email: " + contact.getEmail();
+                res.setText(contactDetails);
+                return;
+            }
+        }
+        res.setText("Contact not found.");
     }
 
     @FXML
