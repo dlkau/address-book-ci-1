@@ -99,9 +99,19 @@ public class SqliteContactDAO implements IContactDAO {
         }
     }
 
+    /**
+     * This method, given a contact, will delete it from the contacts table in the database.
+     * @param contact the contact to be removed from the database.
+     */
     @Override
     public void deleteContact(Contact contact) {
-
+        try {
+            PreparedStatement statement = connection.prepareStatement("DELETE FROM contacts WHERE id = ?");
+            statement.setInt(1, contact.getId());
+            statement.executeUpdate();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     /**
