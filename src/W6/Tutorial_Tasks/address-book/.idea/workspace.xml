@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebb1999f-8c06-4497-ab79-0200a77d2d10" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../W4/Tutorial_Tasks/address-book/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../W4/Tutorial_Tasks/address-book/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/addressbook/model/SqliteContactDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/addressbook/model/SqliteContactDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +42,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "W6__WORKING__BRANCH",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dlkau/OneDrive/Documents/Queensland University of Technology/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W4/Tutorial_Tasks/address-book"
+    "last_opened_file_path": "C:/Users/dlkau/OneDrive/Documents/Queensland University of Technology/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W6/Tutorial_Tasks/address-book",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
