@@ -1,14 +1,17 @@
 package com.example.addressbook.model;
 
 // Add necessary imports
+import java.security.spec.ECField;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 import java.sql.Connection;
 import java.sql.Statement;
 
-public class SqliteContactDao implements IContactDAO {
+public class SqliteContactDAO implements IContactDAO {
     private Connection connection;
 
-    public SqliteContactDao(){
+    public SqliteContactDAO() {
         connection = SqliteConnection.getInstance();
         createTable();
         // Used for testing, to be removed later
@@ -19,7 +22,7 @@ public class SqliteContactDao implements IContactDAO {
      * This method, provided the 'contacts' table does not already exist, will
      * execute the 'create table' statement in the method.
      */
-    public void createTable(){
+    private void createTable(){
         // Create table if it does not already exist
         try {
             Statement statement = connection.createStatement();
@@ -39,19 +42,19 @@ public class SqliteContactDao implements IContactDAO {
     /**
      * This method, for the purposes of testing, inserts three records into the contacts table.
      */
-    private void insertSampleData(){
+    private void insertSampleData() {
         try {
             // Clear before inserting
             Statement clearStatement = connection.createStatement();
             String clearQuery = "DELETE FROM contacts";
             clearStatement.execute(clearQuery);
-            Statement insertStatment = connection.createStatement();
+            Statement insertStatement = connection.createStatement();
             String insertQuery = "INSERT INTO contacts (firstName, lastName, phone, email) VALUES "
                     + "('John', 'Doe', '0423423423', 'johndoe@example.com'),"
                     + "('Jane', 'Doe', '0423423424', 'janedoe@example.com'),"
-                    + "('Jay', 'Doe', '04230423425', 'jaydoe@example.com')";
-            insertStatment.execute(insertQuery);
-        } catch (Exception e){
+                    + "('Jay', 'Doe', '0423423425', 'jaydoe@example.com')";
+            insertStatement.execute(insertQuery);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -76,8 +79,30 @@ public class SqliteContactDao implements IContactDAO {
         return null;
     }
 
+    /**
+     * This method returns all the contacts in the database.
+     * @return a list of contacts in the database
+     */
     @Override
     public List<Contact> getAllContacts() {
-        return null;
+        List<Contact> contacts = new ArrayList<>();
+        try {
+            Statement statement = connection.createStatement();
+            String query = "SELECT * FROM contacts";
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()){
+                int id = resultSet.getInt("id");
+                String firstName = resultSet.getString("firstName");
+                String lastName =  resultSet.getString("lastName");
+                String phone = resultSet.getString("phone");
+                String email = resultSet.getString("email");
+                Contact contact = new Contact(firstName, lastName, phone, email);
+                contact.setID(id);
+                contacts.add(contact);
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return contacts;
     }
 }
