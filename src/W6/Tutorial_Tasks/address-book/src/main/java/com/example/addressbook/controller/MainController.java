@@ -1,5 +1,9 @@
 package com.example.addressbook.controller;
 
+import com.example.addressbook.model.Contact;
+import com.example.addressbook.model.IContactDAO;
+import com.example.addressbook.model.MockContactDAO;
+import com.example.addressbook.model.SqliteContactDao;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -26,9 +30,7 @@ public class MainController {
     private VBox contactContainer;
 
     public MainController(){
-        contactDAO = new MockContactDAO();
-        contactDAO.addContact(new Contact("Jerry", "Doe", "jerrydoe@example.com",
-                "0423423426"));
+        contactDAO = new SqliteContactDao();
     }
 
     /**
