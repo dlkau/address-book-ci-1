@@ -2,6 +2,7 @@ package com.example.addressbook.model;
 
 // Add necessary imports
 import java.security.spec.ECField;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,8 +75,29 @@ public class SqliteContactDAO implements IContactDAO {
 
     }
 
+    /**
+     * This method, given an id, will look at the database and retrieve the id from the database.
+     * @param id the id of the contact to be retrieved from the database.
+     * @return the contact with the provided id.
+     */
     @Override
     public Contact getContact(int id) {
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM contacts WHERE id = ?");
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()){
+                String firstName = resultSet.getString("firstName");
+                String lastName = resultSet.getString("lastName");
+                String phone = resultSet.getString("phone");
+                String email = resultSet.getString("email");
+                Contact contact = new Contact(firstName, lastName, phone, email);
+                contact.setID(id);
+                return contact;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
