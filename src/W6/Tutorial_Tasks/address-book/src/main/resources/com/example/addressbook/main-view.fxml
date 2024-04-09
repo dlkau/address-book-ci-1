@@ -45,6 +45,25 @@
                 <Button text="Cancel" onAction="#onCancel"/>
                 <Button text="Delete" onAction="#onDelete"/>
             </HBox>
+            <VBox>
+                <GridPane hgap="5.0" vgap="5.0">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="70"/>
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                    </columnConstraints>
+                    <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="searchFirstNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <TextField fx:id="searchLastNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                </GridPane>
+
+            </VBox>
+            <HBox>
+                <Button text="Find" onAction="#search"/>
+            </HBox>
+            <VBox>
+                <Label fx:id="res"/>
+            </VBox>
         </VBox>
     </HBox>
 </VBox>
