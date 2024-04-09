@@ -79,9 +79,24 @@ public class SqliteContactDAO implements IContactDAO {
         }
     }
 
+    /**
+     * This method, given a contact, will update the corresponding contact in the database.
+     * @param contact the contact to be updated.
+     */
     @Override
     public void updateContact(Contact contact) {
-
+        try {
+            PreparedStatement statement = connection.prepareStatement("UPDATE contacts SET firstName = ?, " +
+                    "lastName = ?, phone = ?, email = ? WHERE id = ?");
+            statement.setString(1, contact.getFirstName());
+            statement.setString(2, contact.getLastName());
+            statement.setString(3, contact.getPhone());
+            statement.setString(4, contact.getEmail());
+            statement.setInt(5, contact.getId());
+            statement.executeUpdate();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
