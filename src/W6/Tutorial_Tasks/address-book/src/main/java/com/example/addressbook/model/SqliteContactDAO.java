@@ -31,7 +31,7 @@ public class SqliteContactDAO implements IContactDAO {
                     + "firstName VARCHAR NOT NULL,"
                     + "lastName VARCHAR NOT NULL,"
                     + "phone VARCHAR NOT NULL,"
-                    + "email VARCHAR NOT NULL,"
+                    + "email VARCHAR NOT NULL"
                     + ")";
             statement.execute(query);
         } catch (Exception e){

@@ -28,7 +28,7 @@ public class MainController {
     @FXML
     private VBox contactContainer;
 
-    public MainController() {
+    public MainController(){
         contactDAO = new SqliteContactDAO();
     }
 
