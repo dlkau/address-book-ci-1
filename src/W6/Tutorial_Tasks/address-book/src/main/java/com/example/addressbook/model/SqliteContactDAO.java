@@ -67,14 +67,18 @@ public class SqliteContactDAO implements IContactDAO {
     @Override
     public void addContact(Contact contact) {
         try {
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO contacts (firstName, lastName," +
-                    " phone, email) VALUES (?, ?, ?, ?");
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO contacts (firstName, lastName, phone, email) VALUES (?, ?, ?, ?)");
             statement.setString(1, contact.getFirstName());
             statement.setString(2, contact.getLastName());
             statement.setString(3, contact.getPhone());
             statement.setString(4, contact.getEmail());
             statement.executeUpdate();
-        } catch (Exception e){
+            // Set the id of the new contact
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                contact.setID(generatedKeys.getInt(1));
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
