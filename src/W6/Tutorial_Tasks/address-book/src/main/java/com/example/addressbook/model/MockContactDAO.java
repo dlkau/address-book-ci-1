@@ -1,9 +1,12 @@
-package com.example.addressbook;
+package com.example.addressbook.model;
+
+import com.example.addressbook.model.Contact;
+import com.example.addressbook.model.IContactDAO;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MockContactDAO implements IContactDAO{
+public class MockContactDAO implements IContactDAO {
     public static final ArrayList<Contact> contacts = new ArrayList<>();
     private static int autoIncrementID = 0;
 
