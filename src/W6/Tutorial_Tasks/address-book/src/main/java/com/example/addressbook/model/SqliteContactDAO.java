@@ -60,9 +60,23 @@ public class SqliteContactDAO implements IContactDAO {
         }
     }
 
+    /**
+     * This method, given a contact, will add the contact's details to the contacts table of the database
+     * @param contact the contact to be added to the database.
+     */
     @Override
     public void addContact(Contact contact) {
-
+        try {
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO contacts (firstName, lastName," +
+                    " phone, email) VALUES (?, ?, ?, ?");
+            statement.setString(1, contact.getFirstName());
+            statement.setString(2, contact.getLastName());
+            statement.setString(3, contact.getPhone());
+            statement.setString(4, contact.getEmail());
+            statement.executeUpdate();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
