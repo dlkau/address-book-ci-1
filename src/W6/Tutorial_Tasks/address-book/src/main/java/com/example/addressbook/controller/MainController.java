@@ -1,4 +1,4 @@
-package com.example.addressbook;
+package com.example.addressbook.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;

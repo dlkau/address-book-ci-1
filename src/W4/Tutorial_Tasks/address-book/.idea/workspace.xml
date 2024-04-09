@@ -29,9 +29,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2dyc4A8X3wBQxkZhndNGDFMVH1s" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -41,9 +41,9 @@
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "W4__WORKING__BRANCH",
+    "git-widget-placeholder": "W6__WORKING__BRANCH",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dlkau/OneDrive/Documents/Queensland University of Technology/2024/2024 Semester 1 Classes/CAB302/Excercises/Archive/CAB302 Excercises"
+    "last_opened_file_path": "C:/Users/dlkau/OneDrive/Documents/Queensland University of Technology/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W4/Tutorial_Tasks/address-book"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
