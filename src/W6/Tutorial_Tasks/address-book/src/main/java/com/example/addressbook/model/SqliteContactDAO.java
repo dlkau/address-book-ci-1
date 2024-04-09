@@ -15,8 +15,8 @@ public class SqliteContactDAO implements IContactDAO {
     public SqliteContactDAO() {
         connection = SqliteConnection.getInstance();
         createTable();
-        // Used for testing, to be removed later
-        insertSampleData();
+        //// Used for testing, to be removed later
+        //insertSampleData();
     }
 
     /**
