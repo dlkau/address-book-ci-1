@@ -28,7 +28,7 @@ public class SqliteConnection {
      * connection instance (if instance is null), or it will return the current instance.
      * @return a connection instance to the database.
      */
-    private static Connection getInstance(){
+    public static Connection getInstance(){
         if(instance == null){
             new SqliteConnection();
         }
