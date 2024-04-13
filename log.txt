@@ -1,0 +1,1243 @@
+commit 6163216ab3be77ecd4ac663586c76987e6157db1
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:49:03 2024 +1000
+
+    Admin - removing unecessary packages.
+
+commit 387ff80b94b480430a49fc02bdde7d1c0ded08c2
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:46:31 2024 +1000
+
+    (Tutorial) Removed the debugging code in the search method of the MainController class.
+
+commit c683cf5349d43b316a62ee979c79edefcf8c8764
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:45:31 2024 +1000
+
+    (Tutorial) Updated the height of the window to allow the new search functionality to be visible.
+
+commit 27f0ea8d4bb08023733775a2ea035376cc2f3ef7
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:44:20 2024 +1000
+
+    (Tutorial) Updated the main-view fxml file and search method in the MainController class to complete the search functionality
+
+commit 1a3f1aae9fffe22e366461f674449e1cf274d778
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:24:04 2024 +1000
+
+    (Tutorial) Added updates to the main-view fxml file to accomodate for search functionality.
+
+commit cd26d01732bf7b7da047cb0753cafa49bc408f24
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:13:54 2024 +1000
+
+    (Tutorial) Removed the insertSampleData method from the SqliteContactDAO class, since it is no longer needed.
+
+commit 4cec9331a3195368647e9ffe2317041519d364d5
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:12:26 2024 +1000
+
+    (Tutorial) Added the improvement to retrieve the id key from the database.
+
+commit 69b2a293399ff2b790acdc8c491dde68d60db546
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:07:18 2024 +1000
+
+    (Tutorial) Added the implementation for the deleteContact method in the SqliteContactDAO class.
+
+commit c635d3714b1b84a86c45bcc1fac9fa8d56f8ad60
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:05:02 2024 +1000
+
+    (Tutorial) Added the implementation for the updateContact method in the SqliteContactDAO class.
+
+commit 8a0f88f0bd5a0d877ca8a187e15bc9d12656d85a
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 12:00:48 2024 +1000
+
+    (Tutorial) Added the implementation for the add Contact method in the SqliteContactDAO class
+
+commit fdda07fb785ce1c4128a12c1be96cfa4a3e3686a
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 11:56:11 2024 +1000
+
+    (Tutorial) Provided the implementation for the getContact method in the SqliteContactDAO class.
+
+commit 0ecd3bfc212d50e14d1b18a2ce5547b0c7dcfe9e
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 11:49:24 2024 +1000
+
+    (Tutorial) Fixed a bug with the SQL statement for creating the contacts table.
+
+commit 01fc2a27dc884d946c41419152d2a74c7625e22f
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 11:44:23 2024 +1000
+
+    (Tutorial) Provided the implementation for the getAllContacts method.
+
+commit 3f4438de409a139e9ea4ee67364bd764b5f26508
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 11:24:32 2024 +1000
+
+    (Tutorial) Replaced the MockContactDao in the MainController constructor with the SqliteContactDAO class
+
+commit 49b74863a6b47a3f8ea22e934b640848477b122b
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 11:21:57 2024 +1000
+
+    (Tutorial) Added the implementation for the insertSampleData method and call it in the SqliteContactDao constructor
+
+commit dce8150d94996af3f6f8305673c2429535dc05dd
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 11:13:53 2024 +1000
+
+    (Tutorial) Added the method implementation for the createTable method and added it to the SqliteContactDao constructor.
+
+commit fc2984beccec14d47ab2aa2bd2788b70b2f6c4b0
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 11:06:33 2024 +1000
+
+    (Tutorial) Added empty declarations for each of the methods in the IContactDAO interface.
+
+commit cb4dd64017370a075997ba63a45299976d018d04
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 10:58:42 2024 +1000
+
+    (Tutorial) Added an empty class declaration for the SqliteContactDao object
+
+commit 072a95ff4f37554041eafdb67697e2e79dcfef56
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 10:57:09 2024 +1000
+
+    (Tutorial) Added the implementation for the SqliteConnection class, and added a directive to the module-info.java file.
+
+commit 76bcae315d0ee3ec8d690dc31a2d6f7574be11d0
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 10:48:38 2024 +1000
+
+    (Tutorial) Added an empty class declaration for a SqliteConnection object.
+
+commit 4ddf5f2cc49c866c5994aacedf05878a54db12de
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 10:47:54 2024 +1000
+
+    (Tutorial) Added a model package and added the model files into it.
+
+commit 7a4ffd1302848b6606427806808cf12089a81ab6
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 10:46:49 2024 +1000
+
+    (Tutorial) Moved the controller files into a controller package
+
+commit afc75c7250b50ea04735450c09b25ec09a9d876c
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 10:11:41 2024 +1000
+
+    (Tutorial) Added the code from the Week 4 Tutorial
+
+commit 189be01a756d9a41473375c8c39bba17763c941a
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 09:59:25 2024 +1000
+
+    (Reading) Added the test code for the delete method within the BankAccountDAO class.
+
+commit 87ffec8403cfc8f0a66e55fd03680bef36c4d167
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 09:55:36 2024 +1000
+
+    (Reading) Added the implementation for the delete method of the BankAccountDAO class
+
+commit 0feb96f073a6014e620e49dc85512f724372fad2
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 09:49:36 2024 +1000
+
+    (Readings) Updated the implementation for the update method in the BankAccountDAO class and added a test in the main method
+
+commit 32c42f120aeee20f983240c8eb84436c35822ba1
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 09:38:22 2024 +1000
+
+    (Reading) Added the functionality for the update method of the BankAccountDAO class
+
+commit 248b46b17ca3d09748d33dc97184dc48ecb14816
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 09:24:50 2024 +1000
+
+    (Reading) Added a method call to the GetById method of the BankAccountDAO object
+
+commit 6430b7965333d8e400837469207190b6c88c3019
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 09:21:44 2024 +1000
+
+    (Reading) Added the implementation for the GetByID method.
+
+commit 06620f729d517852a0db5e54b1384e21777bb076
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 09:10:43 2024 +1000
+
+    (Reading) Added code to the main method to test the getAll method from the bankAccountDAO class
+
+commit 2fd29a941d8549efb3383be0746a9ed3167fe56c
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 09:05:58 2024 +1000
+
+    (Readings) Added code comments for the getAll method
+
+commit 7bf4eaa30b261786e4149fd0aa0a602508f69b93
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Tue Apr 9 09:02:51 2024 +1000
+
+    (Readings) - Added the implementation for the getAll method.
+
+commit 23b1a6e72dad17a5a9b8a7ded266afd746d82492
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 15:57:01 2024 +1000
+
+    (Reading) Fixed an issue with the Insert SQL logic and added three insert calls to main
+
+commit d2e7043481cb12c7b55aeb517ffad6650bdf7b84
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 15:55:10 2024 +1000
+
+    (Reading) Applied the execute method to the insert method
+
+commit 837efdd1eaf79a035cc18d6172328f8d1a630d0c
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 15:52:25 2024 +1000
+
+    (Reading) Added the implementation for the insert method in the BankAccountDAO class
+
+commit b33ed3bed8adc90f32c3fd59ec75fe27080c3234
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 15:46:48 2024 +1000
+
+    (Reading) Added the createTable method to main
+
+commit 825f82c97e2853f480b03fd97749d817602000ab
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 15:44:13 2024 +1000
+
+    (Reading) Added the implmentation for the CreateTable method in the BankAccountDAO class
+
+commit 1b87f0d23ed52caa41c07e280d1d6b771ba60168
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 15:37:22 2024 +1000
+
+    (Reading) Added the skeleton code for the BankAccountDAO class
+
+commit 12c722e893a21b11dcd34917badb3905ef039e26
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 15:25:23 2024 +1000
+
+    (Readings) Added an empty class declaration for BankAccountDAO
+
+commit 4499168427e6134d2c3dacea084a7556eb4b8a8d
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 15:23:41 2024 +1000
+
+    (Readings) Added the implementation for the BankAccount class
+
+commit f2f666e902531ab93074dabd9302265c12ab2a20
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 14:21:47 2024 +1000
+
+    (Readings) Moved the files to the appropriate com.example package
+
+commit 19c02c312234006a4eb82427d66329f232247d73
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 14:17:41 2024 +1000
+
+    (Reading) Added an empty class declaration for a BankAccount object
+
+commit b8dd8db8b1821187d30a5f334be00f0a54d393cf
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 14:16:22 2024 +1000
+
+    (Readings) Added the Main method to the Main class.
+
+commit c690a139e539a7da441a7824a63b54413e33e78e
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 14:12:05 2024 +1000
+
+    (Readings) Added an empty Main class declaration
+
+commit 9ea72be517a29bc21a9e52f7362ab8510fec5d95
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 14:11:15 2024 +1000
+
+    (Readings) Amended the DatabaseConnection class
+
+commit c18921edcf53ea29d177954cd804443e655af7a2
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 13:58:30 2024 +1000
+
+    (Readings) Added the implementation for the DatabaseConnection object
+
+commit 99582e3119baafb130d54e02138a65c851150287
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Mon Apr 8 13:46:37 2024 +1000
+
+    Added an empty DatabaseConnection class
+
+commit a2fef22a4800a1e6d7fc600c6f60701707b46dee
+Author: dlkau <143229795+dlkau@users.noreply.github.com>
+Date:   Sun Mar 24 22:10:25 2024 +1000
+
+    (Updated Hello World Excercise Week 1) Added a a statement to return 'Hello World' to the terminal
+
+commit e689f4539c5b2c553d5d8d8feb17263b37dc96ce
+Merge: e643c63 660ef9e
+Author: Dylan Kenmuir <143229795+dlkau@users.noreply.github.com>
+Date:   Sun Mar 24 20:55:19 2024 +1000
+
+    ADMIN Resolved conflicts when merging
+
+commit 660ef9e5999d2e6131154a9ed62c291ea1b299ff
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Fri Mar 22 10:32:11 2024 +1000
+
+    (Homework) Implemented the depth first search algorithm
+
+commit e643c63472264d8370c28a968fb8c63fafce8032
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Fri Mar 22 10:18:48 2024 +1000
+
+    (Homework) Implemented an additional path search algorithm called depth first search
+
+commit 5bad8e50910dd9e8f1cb1c06ae8743242a2b1dd4
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Fri Mar 22 08:16:00 2024 +1000
+
+    (Homework) Added an empty class declaration for the DepthFirstSearch implementation
+
+commit cef8e11080aa80777249c1f2900d1fc445e60084
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Fri Mar 22 00:27:53 2024 +1000
+
+    (Homework) Added the Laser object to the parseObstacles method and added a test case to the comments in the main.java file
+
+commit 8dea3d8f97a9ca427cd8a432e2a893ff07a62b77
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Fri Mar 22 00:26:04 2024 +1000
+
+    (Homework) Provided the implementation for the Laser object and added it to the ObstacleType enum
+
+commit fbb9e8ff5fbbe42beed662921de59062ecf5197a
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Fri Mar 22 00:12:34 2024 +1000
+
+    (Homework) Added a empty laser class
+
+commit 4ad58fc4b440b44e25e94e1a8b935279daa03491
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Fri Mar 22 00:12:00 2024 +1000
+
+    (Homework) Added the Wall obstacle to the parseObstacles method and added a comment with a test for the wall obstacle
+
+commit f9a5c5802536fe43b36aeef6a8fc1e5ebc19b29d
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Fri Mar 22 00:09:03 2024 +1000
+
+    (Homework) Added the implementation details for the Wall object. Added Wall to the ObstacleType enum
+
+commit d572141f347839621e6272579360f8cf699a6e34
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 23:51:13 2024 +1000
+
+    (Homework) Added an empty Wall class
+
+commit 89b30c935c344a86f07b74d6763d37277b3ecfee
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 23:49:46 2024 +1000
+
+    (Homework) Added some examples to the main method
+
+commit 2d19799b688f44ea709c3a8a453f0ae87664916a
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 23:48:05 2024 +1000
+
+    (Homework) Updated the parseObstacles method in the main class.
+
+commit 48b2e45d17b47679b81698115cd4e1c2922ae307
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 23:41:50 2024 +1000
+
+    (Homework) Added the attributes and methods for the Camera obstacle class
+
+commit dc91dc5bec9304e01842699bc3f73901680b512f
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 23:27:38 2024 +1000
+
+    (Homework) Created an empty Camera class.
+
+commit c4bc663aff0099b95b43d6e33a85f4c50b236466
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 23:26:10 2024 +1000
+
+    (Homework) Added the implementation details for the Sensor class
+
+commit 442cd9e52222ecaa7e189be18708473fd4e0f5fe
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 23:14:08 2024 +1000
+
+    (Homework) Added an empty class for a new sensor obstacle
+
+commit 398d178b3e3d25ea940173d7e6334e122cefd0a8
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 23:12:52 2024 +1000
+
+    (Homework) Added the implementation details for the Fence object
+
+commit 7a5189c7c7385795837f34901a7be17876f0eccf
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 22:54:22 2024 +1000
+
+    (Homework) Created an empty class for a Fence obstacle
+
+commit 866f8d36d44c4b4b104aae17f5730df060e861b5
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 22:50:32 2024 +1000
+
+    (Homework) Added three new enum objects representing obstacles, namely the FENCE, SENSOR and CAMERA
+
+commit 0d4bddb1717effee15c11eb0750c88086039a995
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 22:30:40 2024 +1000
+
+    (Tutorial) Made bug fixes and added the additoinal challenge code to the application
+
+commit 367f624aa0db0ce989b754952fef130bafef090e
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 22:21:57 2024 +1000
+
+    (Tutorial) Removed the welcome text and the hello button from the hello-view.fxml file
+
+commit 9cae03a8c3897004eb8b5bd8a575efac8f28252a
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 22:16:01 2024 +1000
+
+    (Tutorial) Updated the hello-view.fxml file so that when the cancel button is selected, the onCancelButtonClick method is invoked closing the window
+
+commit dc1a6d30213872972353e8db89ec955961ea4349
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 22:14:22 2024 +1000
+
+    (Tutorial) Added the onCancelButtonClick method in the HelloController class
+
+commit f6caa6b7a3409becdefba70b2931a04472f61173
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 22:11:54 2024 +1000
+
+    (Tutorial) Updated the syncContact method to change the visibility of the contact container based on the number of contacts and updated the intialise method in the MainController class
+
+commit ac49a699fbe99fe69796d5f07d58c6a0c46445b8
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:59:46 2024 +1000
+
+    (Tutorial) Added a fx:id, contactContainer, to the VBox in main-view.fxml
+
+commit 164d4c487a799f22821af9f0c8d2e8f2aeb5c435
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:56:32 2024 +1000
+
+    (Tutorial) Updated the main-view.fxml file to bind the onCancel method to the cancel button
+
+commit 73877f939fdf1f34546cded9bb867d126b7536ec
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:55:01 2024 +1000
+
+    (Tutorial) Added an onCancel method to the MainController class
+
+commit cf4a47e13e6e78f0ec06c4155dd9f6a55df69b6c
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:49:45 2024 +1000
+
+    (Tutorial) Binded the onAdd method to the new button in the main-view.fxml file
+
+commit 9eef6fe5f7efa595eb80eba914faa307829afed3
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:47:51 2024 +1000
+
+    (Tutorial) Added the onAdd method to add contacts to the database
+
+commit 6ced1af5c534ddc4d852292a49f928506ca970b0
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:42:37 2024 +1000
+
+    (Tutorial) Assigned the onDelete method to the delete button in the main-view.fxml file.
+
+commit e60d85caf166b8332e872064a4e4724c78568a81
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:41:34 2024 +1000
+
+    (Tutorial) Added an onDelete method to delete contacts from the database
+
+commit fb09a090245ecb9492622951e04be20c29048117
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:38:03 2024 +1000
+
+    (Tutorial) Set the onAction attribute for the contrim button to the onEditConfirm method in the MainController task.
+
+commit 2dd8af5a0f4445bde551e8be772a0c1038e5cc52
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:35:18 2024 +1000
+
+    (Tutorial) Added an onEditConfirm method to update a given contact's information using the provided information in the text fields
+
+commit 5f5a7b5eee83ee8911b966a19c5afb4bb1f908ff
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:27:45 2024 +1000
+
+    (Tutorial) Updated the MainController class to allow contact details to be viewed when a specific contact is selected.
+
+commit ee6ccf19c1153dac197f89b1c876db3e7c65fafe
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:09:01 2024 +1000
+
+    (Tutorial) Added additional attributes to the MainController class
+
+commit 9dbc1e2b04804fc578f12303d04e1f93b4f9f9dd
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 21:04:51 2024 +1000
+
+    (Tutorial) Added a line to the MainController class to include the Jerry Doe contact. The getFullName method was updated to include an email as well
+
+commit 1b15d307e45e1dadcc2db65a604951c247d77545
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 20:57:41 2024 +1000
+
+    (Tutorial) Added the syncContacts method to the MainController class
+
+commit 16c72e1575d4d887185e6cc4433fcaa10ace7e58
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 20:42:46 2024 +1000
+
+    (Tutorial) Added the code for the MainController class
+
+commit 99e9273ca4f5da1734ffd91a4975d26b54d9a1e4
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:51:03 2024 +1000
+
+    (Tutorial) Implemented the attributes and methods for the MockContactDOA class
+
+commit 1b340cf4a62e03d2a41c16dbfccb18f1d7fe9d7d
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:39:23 2024 +1000
+
+    (Tutorial) Added a empty MockContactDAO class
+
+commit 23a88786b0e0b2a4228dd14a4bfe30df124d15c0
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:38:35 2024 +1000
+
+    (Tutorial) Added the methods to the IContactDAO interface
+
+commit b6a1893302d7fa6bafb15cd7a7b7d463797ee41e
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:33:04 2024 +1000
+
+    (Tutorial) Added a new interface for a data access object
+
+commit 719fd1942c0650bf4005e9b5e4256974fa7bb68b
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:32:03 2024 +1000
+
+    (Tutorial) Added the necessary attributes, getters and setters to the newly created Contact class
+
+commit f0206f084c3ff663cd4835b77fe91b05c5dc48fb
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:23:45 2024 +1000
+
+    (Tutorial) Added an empty Contact class
+
+commit eafb575ee0db21ee85907fd4307c54567e6e06e5
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:22:44 2024 +1000
+
+    (Tutorial) Updated the hello-view.fxml file to call the onNextButtonClick method when the next button is clicked
+
+commit fe899aecea99d1414184cfa7d4d58e18d8721936
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:20:24 2024 +1000
+
+    (Tutorial) Added functionality to the HelloController class to allow users to navigate to the main-view screen
+
+commit c4ad9cdb917c0511ac53cfb02fe4fed3bd88be5e
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:16:29 2024 +1000
+
+    (Tutorial) Added an empty MainController class
+
+commit 39cc967d73c1a0969a2a105331d0b0613595a1cf
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 12:15:26 2024 +1000
+
+    (Tutorial) Updated the newly created fxml file to reflect the main view users would see when using the application
+
+commit 39b157551cabf982517257578b765f5f7a9726ed
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:58:26 2024 +1000
+
+    (Tutorial) Added a new fxml file for the main-view
+
+commit 59254d886719118cd1c705ed27cb51a65bf3c624
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:57:06 2024 +1000
+
+    (Tutorial) Updated the fxml to link the onAgreeCheckBoxClick method in the controller class to the checkbox
+
+commit 30ff0a47c414b4df27b818f06939aafbd074772a
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:54:44 2024 +1000
+
+    (Tutorial) Added the checkbox functionality to enable the next button to be selected by the user.
+
+commit 4db77a773d80458b6934f9d3cb3cbded09d60125
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:50:28 2024 +1000
+
+    (Tutorial) Updated the HelloController file to include text in the terms and conditions box
+
+commit 9d4b9b82b048e4014ccf8fe3579980b52e1e341f
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:47:53 2024 +1000
+
+    (Tutorial) updated the fxml file to reflect a terms and conditions page you would normally see with an application.
+
+commit b415b787722a862a3a74af0eb052503d4a0d19d8
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:27:22 2024 +1000
+
+    (Tutorial) Updated the HelloApplication file's size and title
+
+commit fe73399aeb7a477c4a332839f54cecc79d8a951e
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:24:49 2024 +1000
+
+    (Tutorial) Added the necessary JavaFX files to complete the tutorial task
+
+commit b24b0dd425e72743367d9904cde5d7d33023557f
+Merge: 3151664 3ff351d
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:08:50 2024 +1000
+
+    Merge branch 'W4_WORKING_BRANCH' of https://github.com/dlkau/CAB302_Weekly_Tasks into W4_WORKING_BRANCH
+
+commit 31516644e2e2a845432407c96a784744641592ba
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:08:12 2024 +1000
+
+    (Readings) Updated the Controller class to accomodate for button clicks and updated the fxml to include ids and the appropriate controller path
+
+commit 70bf8000f3e50195f68d7dcadb020e8e9120b2cd
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 11:01:04 2024 +1000
+
+    (Readings) Updated Button 3 in the fxml file to have an id and added the fx namespace to the file
+
+commit 977e0e18a1226da33ef4e890d60d40614c54505d
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 10:54:41 2024 +1000
+
+    (Readings) Updated the CSS stylesheet to apply cosmetic changes to the Java desktop application
+
+commit f03a0eb336f92777c9180f24e07d30553257c7fe
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 10:45:21 2024 +1000
+
+    (Readings) Added additional lines of code in the start method to retrieve the css stylesheet. An empty css stylesheet has also been created
+
+commit fe02db33acd1452eeff41346e8b86a6cf898423f
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 10:36:16 2024 +1000
+
+    (Readings) Updated the HelloApplication start method to load the newly fmxl file instead
+
+commit 7ba5e9b0de00c3be75ac5b4cd3c492ec3ffbc27b
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 10:34:09 2024 +1000
+
+    (Readings) Updated the hello-view-fxml file
+
+commit 9582b5535a5289adc7ca79aaf8e2ba6169ea06b2
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 10:28:35 2024 +1000
+
+    (Readings) Updated the helloApplication file to add  more visual elements to the stage
+
+commit 4175e8f2e4e24a3e30d58a09a0aa35dd95dcc03f
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 10:20:08 2024 +1000
+
+    (Readings) Added the starting JavaFX project files for the readings.
+
+commit ddd309220c6573074050da5ca54591f1ff97994d
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Thu Mar 21 10:11:21 2024 +1000
+
+    (Readings) Added the infiltration project files from week 3 to week 4.
+
+commit 3ff351d4d4b9b9ad93e38ee66da646dad2aeda88
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 23:02:12 2024 +1000
+
+    Added the homework tasks from week 3 to week 4
+
+commit f61e34e8a22ac54c8353ffeb1c06d2352f012a79
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 22:57:11 2024 +1000
+
+    (Homework) Made adjustments to the formatting in the Map class
+
+commit 545828c5cd20496ef8d022b6ef070f6b46cc2962
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 22:52:58 2024 +1000
+
+    (Homework) Updated the getSolvedMap method in the Map class.
+
+commit 4a6ef924071ee65028efbd6dd98edeab1cbfa705
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 22:43:36 2024 +1000
+
+    (Homework) Implemented the isLocationObstructed method in the Map class
+
+commit 2d90e1d5c760cd45b56090726eac19bf0e45d8a3
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 22:38:17 2024 +1000
+
+    (Homework) Added the implementation details for the BFSPathFinder class
+
+commit f3e47e5dc3a93a26058b2e339021d5c774db3440
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 22:15:05 2024 +1000
+
+    (Homework) Added an empty BFSPathFinder class (which implements the GridPathFinder interface)
+
+commit 3dc0029c4a96ea178e081bdc0a548220e66cc3e6
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 22:11:28 2024 +1000
+
+    (Homework) Added the methods to the GridPathFinder interface.
+
+commit 6eb0c5e4ae35cdd742aafd3545fb9416869fb085
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 22:04:33 2024 +1000
+
+    (Homework) Created an empty GridPathFinder interface
+
+commit 8d47071d5ec74bc66952e523337007601edd55a1
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 21:54:21 2024 +1000
+
+    (Homework) Implemented the attributes and methods for the Path class.
+
+commit 831b182d9058bcd9e698db73a868b0d1a9aae889
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 21:02:58 2024 +1000
+
+    (Homework) Added an empty class declaration for a Path object
+
+commit 9f16167d948ec46305d19d506126add43fb43f57
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 20:55:07 2024 +1000
+
+    (Homework) Added methods to the Direction enum class
+
+commit 673bb97e9e663aefa798bbc0d2e7f08637e28826
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 19:04:09 2024 +1000
+
+    (Homework) Added an empty Direction Enum declaration
+
+commit e41e10fdc78d5e65dfbad65b0e008e2d938c0c53
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 13:47:58 2024 +1000
+
+    Added the infiltration files from week 2 to week 3
+
+commit 6715aeadcc06027cd30c8c35416a8793ddb242ee
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 13:43:10 2024 +1000
+
+    (Homework) Updated the main method to extract the start and target positions and create and display a map object depicting these two locations
+
+commit 4c3d8c0d81b2bc189fa20cc78d82940b45549067
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 13:34:46 2024 +1000
+
+    (Homework) Implemented the required attributes and methods for the Map class.
+
+commit 6a0426011af6c5b0e8dfd27542f93ae883738ed7
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 13:08:02 2024 +1000
+
+    (Homeowrk) Created an empty Map class.
+
+commit 6ef08cd8f7e99fd2d1623f3387d2c9678c50b557
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 13:06:42 2024 +1000
+
+    (Homework) Added a stripParentheses method and parseObstacles method to enable Guards to be instantiated.
+
+commit ea5efc4594ae75dd6b70ab8da381f5727aab571b
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 12:55:42 2024 +1000
+
+    (Homework) Added an implementation of a Guard Obstacle which extends/inherits from the abstract LocatableObstcale class
+
+commit 59f312b81c126561db14551184bf22125c06fa68
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 12:32:10 2024 +1000
+
+    (Homework) Implemented the ObstacleTypes enum, including its attributes and methods.
+
+commit f70462227151b10c77b9fef70dad48b98ef27882
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 12:25:43 2024 +1000
+
+    (Homework) Added an empty enum for the ObstacleType class
+
+commit 6165e3ec8aa0fb9ae0e3ba09ac58b8c068d8e356
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 12:24:19 2024 +1000
+
+    (Homework) Added the required attributes and methods to the LocatableObstacles class
+
+commit 5b664ad5648b8c404e7d44236f5588e404e04f38
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 12:16:02 2024 +1000
+
+    (Homework) Created an empty LocatableObstacle abstract class which implements the Obstacle interface
+
+commit dedb3b4c3c572df917f0dd1ef484dd69694ebcc1
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 12:13:48 2024 +1000
+
+    (Homework) Implemented the required attributes and methods in the Location class
+
+commit ea7d64db9f2e0b22ed9aaf244369c0ccb50642c3
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 12:02:10 2024 +1000
+
+    (Homework) Created an empty Location class declaration
+
+commit a2aa929d7a3388d85dd32f069c4b485dcb97de28
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 12:01:23 2024 +1000
+
+    (Homework) implemented the Obstacle interface
+
+commit 8d3c7ce067594dbc402f8375c613b9fbb2b4f344
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 11:56:46 2024 +1000
+
+    (Homework) Added an empty Obstacle interface
+
+commit 917909e815d470fae7a636bff0ea344308c0e3e5
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 11:47:51 2024 +1000
+
+    (Tutorial) - Added code to gracefully handle when a user incorrectly inputs a username or password in the onLogIn method.
+
+commit 7a768683d4adcea3243b0f0bc8aa0df9fcc75847
+Merge: ce46c4a 2b67244
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 11:43:24 2024 +1000
+
+    (Tutorial) Resolving merge conflicts
+
+commit ce46c4a8d9b33c8d9ef9e74f261c310c1023ce75
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 11:38:09 2024 +1000
+
+    (Tutorial main) Formatting ammendments
+
+commit 2ce563bf155fad20eb46b0c667492451a5e85990
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 11:36:56 2024 +1000
+
+    (Tutorial Main ~ AuthService) - Implemented the AutenticationService in the Main class and updated the onSignUp() method.
+
+commit 210d4c6abec0437a571ea8e00baf3a1978839836
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 11:27:59 2024 +1000
+
+    (Tutorial AuthenticationService) Added the necessary implementations for the AuthenticationServices class.
+
+commit 0d245b5c34bda55294b89513acb09fabda5e3dbb
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 11:14:50 2024 +1000
+
+    (Tutorial Authentication) - Added the starting code to the Authentication class
+
+commit f84c4786c9692a5bc3db94ab117dc97c764aaad9
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 11:12:14 2024 +1000
+
+    (Tutorial Authentication) - Created and empty Authentication class which implements the IAuthenticationSerivce interface
+
+commit 2b672441efdcd215d722d90f06ccc5b0444b9331
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 11:00:00 2024 +1000
+
+    (Tutorial Main ~ ToDoList) Added the toDoList operations to the OnLogIn method in main
+
+commit 6a8be17a720bdec88e325b66107a068534b9d7ac
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 10:57:14 2024 +1000
+
+    (Tutorial ToDoList) I have implemented each of the ToDo sections
+
+commit fc255b7fc3e9995c36942eee981f1d31748c7282
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 10:53:07 2024 +1000
+
+    (Tutorial ToDoList) Added the intial code for the ToDoList class
+
+commit ca5d4464dd8216d66d01a49393087502a963d6ce
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 10:31:35 2024 +1000
+
+    (Tutorial ToDoList) Created an empty ToDoList class
+
+commit c59ad92631fbdd394de170e6238111560c15e9c6
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 10:30:36 2024 +1000
+
+    (Tutorial User) Added an additional attribute to record and store the ToDoItems a user has and provided a getter for this field
+
+commit 309f09c497a1143c82b9c248d369a2af98f26d5f
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 10:27:09 2024 +1000
+
+    (Tutorial ToDoItem) Added the required code for the ToDoItem
+
+commit 134084b0588aa4f96dce41a369e03240c878deb6
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 10:19:19 2024 +1000
+
+    (Tutorial ToDoItem) Added an empty ToDoItem class
+
+commit ab60d7d9e22b84345a877b551bb8628319dbcbe0
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 10:16:36 2024 +1000
+
+    Added the necessary content to the IAuthenticationService
+
+commit 07bbe22e59cfaaa4b2ccbae31a927f059d596ad6
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 10:15:11 2024 +1000
+
+    (Tutorial) Added the initial code for the User class
+
+commit 93b1d4d7dc98b5e2b3e65980cc906fcc81c2fd73
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 10:10:36 2024 +1000
+
+    (Tutorial) Addded the initial code to the main class (main.java) file
+
+commit a2bf4ab5e27b8201347c3393bfe2d513d2d7efcf
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 09:48:50 2024 +1000
+
+    (Tutorial) Added the initial classes required for the ToDoList application
+
+commit 0d5d00fcff004418482ccadd6271b73932b77e14
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 09:39:57 2024 +1000
+
+    (Readings) Resolved the conflicts when merging from the W2_WORKING_BRANCH to the W2_print-box branch
+
+commit 8297fb0cf524bd9e98892bb65002e03ba9c22ec8
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 09:35:15 2024 +1000
+
+    (Readings) Fixed the code up back to its last working commit and fixed the conflict
+
+commit 7b8373f3375c096bc2d8ed1fbd14a746a46e69e6
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 09:23:20 2024 +1000
+
+    Revert "(Readings) Merged changes from rectangle and triangle branches"
+    
+    This reverts commit a60089a21d2d5389a24c978eabc970eeff96cd58, reversing
+    changes made to 2fc48f87d47be2fde324a6d7c0f2abe0489308ba.
+
+commit ff760da914fca1799918313ef72f184b3826a2c6
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 09:12:08 2024 +1000
+
+    (Readings) Added leftPad feature
+
+commit a60089a21d2d5389a24c978eabc970eeff96cd58
+Merge: 2fc48f8 83ff793
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 09:02:17 2024 +1000
+
+    (Readings) Merged changes from rectangle and triangle branches
+
+commit 2fc48f87d47be2fde324a6d7c0f2abe0489308ba
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 09:00:21 2024 +1000
+
+    (Readings) Added a triangle
+
+commit 83ff793d07f46412e5283d4a1fdb1420f073aada
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 08:58:50 2024 +1000
+
+    (Readings) Added a rectangle
+
+commit 780992300d94736d4ae1931e91075cb6a0dcb1c9
+Merge: 85f8c76 277afef
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 08:56:56 2024 +1000
+
+    Merge branch 'fix-typo' into W2_WORKING_BRANCH
+
+commit 277afef1ab9dbe833b0bf3696853a5d47a5fff98
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 08:54:51 2024 +1000
+
+    (Readings) Fixed typo
+
+commit 85f8c764be9ef063d64031200f47449b726d68c9
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 08:46:00 2024 +1000
+
+    (Readings) Added project message
+
+commit 173809fab633326a279509e38add50a24e21f675
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 08:42:07 2024 +1000
+
+    (Readings) Added welcome message
+
+commit 5d9c22c31b6ccfc8b2e565426b89fadf006fbca7
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 08:41:07 2024 +1000
+
+    (Readings) Initial commit
+
+commit f0964be26730f7b33b84dd319c760a7e307fefea
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 08:37:11 2024 +1000
+
+    (Readings) Simulated what happens when Bob made his changes to the file and saves it
+
+commit 572f3cf32986f0b4a6742b4d6a6a9863d15033ce
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 08:36:29 2024 +1000
+
+    (Readings) Simulated the changes made by Alice
+
+commit c77b801e08c2f23787cb433649d58693c2f7cc78
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 08:35:24 2024 +1000
+
+    (Readings) Added code simulating what it looked like at the beginning of the day
+
+commit ed349367709b3cefac8a26cbea9c5bcab0acad35
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 00:32:08 2024 +1000
+
+    Added the infiltration files from week 1 to week 2
+
+commit d9215cc0054860b8c05a8811d67af6021c7f537c
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 00:26:24 2024 +1000
+
+    (Homework) Added a comment to the main method
+
+commit 457426652b1708fa7266413f63b0b744320046e9
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 00:24:34 2024 +1000
+
+    (Homework) Added the processCmdArgs method to parse command line arguments.
+
+commit d58f353dc3222696ac809670ed0122ef35568ca7
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 00:14:53 2024 +1000
+
+    (Homework) Created a Infiltration package and a main class
+
+commit fb4babd720629fb57f1ebeb4d0791f4f592a6d79
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 00:11:31 2024 +1000
+
+    (Tutorial SuperHero) Implemented the attributes and methods in the SecretAgent class
+
+commit 546aeac7d2761a81d12e869d42c3040157a4bacd
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Wed Mar 20 00:02:33 2024 +1000
+
+    (Tutorial SuperHero) Added a SecretAgent class to the hero package.
+
+commit 0902489196572d4eed0c6279790d5a6bfdf455ac
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Tue Mar 19 23:59:27 2024 +1000
+
+    (Tutorial SuperHero) Corrected a datatype in the EnhancedHuman class.
+
+commit b08983e9c762c49fd9aa5c823cecc8bb425d7ee7
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Tue Mar 19 23:54:16 2024 +1000
+
+    (Tutorial SuperHero) Implemented the attributes and methods for the SuperHuman class.
+
+commit bc631edc9816b15af79996a59e0ee7cc1c268388
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Tue Mar 19 23:35:35 2024 +1000
+
+    (Tutorial SuperHero) Implemented the attributes and methods for the EnhancedHuman class
+
+commit 423d87e4112dcfc007f0462bdd316cca36a00f29
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Tue Mar 19 23:20:39 2024 +1000
+
+    Implemented the attributes and methods for the Human class
+
+commit 9aeb71989f1561a5bc947e147818f41e615b6794
+Author: Dylan Kenmuir <n11251565@qut.edu.au>
+Date:   Tue Mar 19 23:11:09 2024 +1000
+
+    (Tutorial SuperHero) Implemented the attributes and methods for the abstract SuperHero class
+
+commit 8c4a99b3130c1e41cdd919139b5827f39a905ec9
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 22:45:23 2024 +1000
+
+    (Tutorial SuperHero) Added the required classes.
+
+commit 4f005e556322fbc237626ad5634c9cd22f5b210d
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 22:39:32 2024 +1000
+
+    (Tutorial FootyScore) Ammended the Points_Per_Behind and Points_Per_Goal values in the getPoints() method
+
+commit a5ce91b2c68364eae45bb36958d179b03d3552a7
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 22:36:49 2024 +1000
+
+    (Tutorial FootScore) Implemented the necessary attributes for the FootyScore class
+
+commit 0ac9b54a80e3e4f76fd6790e7c4566d275fc3152
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 22:22:43 2024 +1000
+
+    (Tutorial FootyScore) Added an empty FootyScore class
+
+commit 43ed0527cc2fb3842320a54dc8014115c255f877
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 22:21:15 2024 +1000
+
+    (Tutorial Shapes) Added the surfaceAreaSum, volumeSum and Main methods to the ShapeHandler class
+
+commit 25d17285ccdbc0f8ca17acb04352ea8d180b0232
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 11:44:15 2024 +1000
+
+    (Tutorial Shapes) Created an empty 'ShapeHandler' class
+
+commit fc1ad5cbe5f792cb66b3e19a463853e28a386326
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 11:42:29 2024 +1000
+
+    (Tutorial Shapes) Implemented the surfaceArea and volume methods from the 'Shape' interface for the 'Tetrahedron' class
+
+commit 9ac481828f4bf416fc24777b976c58c115d442cf
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 11:26:57 2024 +1000
+
+    (Tutorial Shapes) Implemented the surfaceArea and volume methods from the 'Shape' interface for the 'Cylinder' class
+
+commit 144c312bfc30ec55b0037d2c0f2bc55bf0b43dea
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 11:14:03 2024 +1000
+
+    (Tutorial Shapes) Implemented the surfaceArea and volume methods from the 'Shape' interface to the 'Cube' class.
+
+commit 175eb052f0e908baefb487eef1d785ffac52c129
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 11:05:29 2024 +1000
+
+    Added three shape shape classes, each implementing the Shape interface.
+
+commit 1c077c72076958dc59bc1ba0adf360f339504a14
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 11:00:58 2024 +1000
+
+    (Tutorial Summation) - Updated the conditon in the add method to be inclusive and updated 'total' to be an int.
+
+commit 639b437f9a29018762d43bdc6006c96e63c798eb
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Tue Mar 19 07:27:58 2024 +1000
+
+    (Tutorial) Cloned the resources from GitHub for the tutorial this week.
+
+commit 19d69810ac9a0a599d0945215ec2744b91616ca6
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 23:10:53 2024 +1000
+
+    (Readings Example 3) Added code to Example.java demonstrating the concept of polymorphism
+
+commit 84c4084772edff34e0f4a5c5255ed85365a7c179
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 23:04:48 2024 +1000
+
+    (Readings Example 3) - Implemented the addCourse method in the Student class and provided test cases in Example.java.
+
+commit b2c94e1896470ae1055375ea0a55e5e8d8d81ac8
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 21:50:29 2024 +1000
+
+    (Readings Example 3) - Implemented the initial attributes, constructors and getter and setter methods.
+
+commit faca135aa04e63b3c615e275ab57baa40f7973a3
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 21:29:58 2024 +1000
+
+    (Readings Example 3) - Added a Student class to the models package.
+
+commit dc654a9010345d2925c460ad4083a342ca0bfc75
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 21:27:18 2024 +1000
+
+    (Readings Example 3) - Added an Example class which creates and displays a Person object in two different ways.
+
+commit 65fca3a2a2154beb87fa5bc178c5098455b9a6a0
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 21:09:52 2024 +1000
+
+    (Readings Example 3) - Added the constructors, getters and setters for the Person object.
+
+commit 0ba557c5efdc81fcf2852d6608ea60924d9aa448
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 20:53:43 2024 +1000
+
+    (Readings Example 3) - Created a models package with a Person class.
+
+commit 770355358270e565497f56cff990b05676ee63e8
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 20:48:34 2024 +1000
+
+    (Readings Example 2) - Created a for loop to print out each command line argument.
+
+commit ed21c41fdaf324b02b91fb0b711c22d72e56aec6
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 20:32:50 2024 +1000
+
+    (Readings Example 1) - Created a Hello_World class, adding a main method which returns 'Hello World' to the console.
+
+commit 2c179b5fa14673ad1481265251d37400a7bf5319
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 20:23:37 2024 +1000
+
+    Added packages corresponding to each week's reading, tutorial and homework tasks
+
+commit 1243f4910e4cf3c76c1f3111312feb6dc36cd0d9
+Author: test@qut.edu.au <n11251565@qut.edu.au>
+Date:   Mon Mar 18 20:14:50 2024 +1000
+
+    Preparing the repository for the weekly tutorial and homework tasks.
