@@ -11,7 +11,11 @@ public class Sum {
      * @param i1 the second number to be summed.
      * @return the total sum between the two values.
      */
-    public int doSum(int i, int i1){
-        return i + i1;
+    public int doSum(int i, int i1) throws Exception {
+        int sum = i + i1;
+        if (i > 0 && i1 > 0 && sum < 0) {
+            throw new Exception("Overflow!");
+        }
+        return sum;
     }
 }
