@@ -7,6 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/src/W4/Reading_Tasks" />
       <excludeFolder url="file://$MODULE_DIR$/src/W4/Tutorial_Tasks" />
       <excludeFolder url="file://$MODULE_DIR$/src/W6/Tutorial_Tasks" />
+      <excludeFolder url="file://$MODULE_DIR$/src/W7/Reading_Tasks/address-book" />
+      <excludeFolder url="file://$MODULE_DIR$/src/W7/Reading_Tasks/junit-demo" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
