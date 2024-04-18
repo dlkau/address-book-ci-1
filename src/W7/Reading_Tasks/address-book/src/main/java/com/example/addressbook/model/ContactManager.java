@@ -10,10 +10,13 @@ public class ContactManager {
         this.contactDAO = contactDAO;
     }
 
-    public List<Contact> searchContacts(String query){
+    public List<Contact> searchContacts(String query) {
+        if (query == null || query.isEmpty()) {
+            return contactDAO.getAllContacts();
+        }
         ArrayList<Contact> results = new ArrayList<>();
-        for (Contact contact : contactDAO.getAllContacts()){
-            if (contact.getFirstName().contains(query)){
+        for (Contact contact : contactDAO.getAllContacts()) {
+            if (contact.getFullName().contains(query)) {
                 results.add(contact);
             }
         }
