@@ -7,18 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MockContactDAO implements IContactDAO {
-    public static final ArrayList<Contact> contacts = new ArrayList<>();
-    private static int autoIncrementID = 0;
-
     /**
-     * This constructor instantiates a MockContactDAO object, adding three mock contacts to the 'database.'
+     * A static list of contacts to be used as a mock database.
      */
-    public MockContactDAO(){
-        // Add some initial contacts to the Mock database
-        addContact(new Contact("John", "Doe", "JohnDoe@example.com", "0412122123"));
-        addContact(new Contact("Mary", "Doe", "MaryDoe@example.com", "0412174826"));
-        addContact(new Contact("Bob", "Doe", "BobDoe@example.com", "0430962842"));
-    }
+    public final ArrayList<Contact> contacts = new ArrayList<>();
+    private int autoIncrementID = 0;
+
+//    /**
+//     * This constructor instantiates a MockContactDAO object, adding three mock contacts to the 'database.'
+//     */
+//    public MockContactDAO(){
+//        // Add some initial contacts to the Mock database
+//        addContact(new Contact("John", "Doe", "JohnDoe@example.com", "0412122123"));
+//        addContact(new Contact("Mary", "Doe", "MaryDoe@example.com", "0412174826"));
+//        addContact(new Contact("Bob", "Doe", "BobDoe@example.com", "0430962842"));
+//    }
 
     /**
      * This method adds a new contact to the database.

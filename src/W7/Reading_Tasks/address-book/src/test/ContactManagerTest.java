@@ -1,18 +1,11 @@
-/**
- * This class is used to test the implementation of the ContactManager
- * class.
- */
-
-// Add necessary class inputs
 import com.example.addressbook.model.*;
 
 import org.junit.jupiter.api.*;
-import static org.junit.jupiter.api.Assertions.;
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 public class ContactManagerTest {
     private ContactManager contactManager;
-    // Define an Array of Contacts
     private Contact[] contacts = {
             new Contact("John", "Doe", "johndoe@example.com", "0423423423"),
             new Contact("Jane", "Doe", "janedoe@example.com", "0423423424"),
@@ -24,25 +17,26 @@ public class ContactManagerTest {
     };
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         contactManager = new ContactManager(new MockContactDAO());
     }
 
     @Test
-    public void testSearchInOneContact(){
+    public void testSearchInOneContact() {
         contactManager.addContact(contacts[0]);
         List<Contact> contacts = contactManager.searchContacts("John");
         assertEquals(1, contacts.size());
         assertEquals(this.contacts[0], contacts.get(0));
     }
+
     @Test
-    public void testSearchInMultipleContacts(){
-        for (Contact contact : contactManager){
-            contactManager.add(contact);
+    public void testSearchInMultipleContacts() {
+        for (Contact contact : contacts) {
+            contactManager.addContact(contact);
         }
         List<Contact> contacts = contactManager.searchContacts("Doe");
         assertEquals(3, contacts.size());
-        for (Contact contact : contacts){
+        for (Contact contact : contacts) {
             assertTrue(contact.getLastName().equals("Doe"));
         }
     }
@@ -57,8 +51,8 @@ public class ContactManagerTest {
     }
 
     @Test
-    public void testSearchEmptyQuery(){
-        for (Contact contact : contacts){
+    public void testSearchEmptyQuery() {
+        for (Contact contact : contacts) {
             contactManager.addContact(contact);
         }
         List<Contact> contacts = contactManager.searchContacts("");
@@ -66,8 +60,8 @@ public class ContactManagerTest {
     }
 
     @Test
-    public void testSearchNullQuery(){
-        for (Contact contact : contacts){
+    public void testSearchNullQuery() {
+        for (Contact contact : contacts) {
             contactManager.addContact(contact);
         }
         List<Contact> contacts = contactManager.searchContacts(null);
@@ -75,20 +69,20 @@ public class ContactManagerTest {
     }
 
     @Test
-    public void testSearchCaseInsensitive(){
-        for (Contact contact : contacts){
+    public void testSearchCaseInsensitive() {
+        for (Contact contact : contacts) {
             contactManager.addContact(contact);
         }
-        List<Contact> contacts = contactManager.searchContacts("Jane");
+        List<Contact> contacts = contactManager.searchContacts("jane");
         assertEquals(2, contacts.size());
-        for (Contact contact : contacts){
-            assertTrue(contact.getFirstName().equals("Jane"));
+        for (Contact contact : contacts) {
+            assertTrue(contact.getFirstName().equalsIgnoreCase("Jane"));
         }
     }
 
     @Test
-    public void testSearchParitalQuery(){
-        for (Contact contact : contacts){
+    public void testSearchPartialQuery() {
+        for (Contact contact : contacts) {
             contactManager.addContact(contact);
         }
         List<Contact> contacts = contactManager.searchContacts("ane");
@@ -105,8 +99,8 @@ public class ContactManagerTest {
     }
 
     @Test
-    public void testSearchByEmail(){
-        for (Contact contact : contacts){
+    public void testSearchByEmail() {
+        for (Contact contact : contacts) {
             contactManager.addContact(contact);
         }
         List<Contact> contacts = contactManager.searchContacts("example.com");
@@ -114,29 +108,29 @@ public class ContactManagerTest {
     }
 
     @Test
-    public void testSearchByPhone(){
-        for (Contact contact : contacts){
+    public void testSearchByPhone() {
+        for (Contact contact : contacts) {
             contactManager.addContact(contact);
         }
-        List<Contact> contacts = contactManager.searchContact("0423423423");
+        List<Contact> contacts = contactManager.searchContacts("0423423423");
         assertEquals(1, contacts.size());
         assertEquals("John", contacts.get(0).getFirstName());
     }
 
     @Test
     public void testSearchByFullName() {
-        for (Contact contact : contacts){
+        for (Contact contact : contacts) {
             contactManager.addContact(contact);
         }
-        List<Contacts> contacts = contactManager.searchContacts("Jane Doe");
+        List<Contact> contacts = contactManager.searchContacts("Jane Doe");
         assertEquals(1, contacts.size());
         assertEquals("Jane", contacts.get(0).getFirstName());
         assertEquals("Doe", contacts.get(0).getLastName());
     }
 
     @Test
-    public void testSearchByFullNameCaseInsensitive(){
-        for (Contact contact : contacts){
+    public void testSearchByFullNameCaseInsensitive() {
+        for (Contact contact : contacts) {
             contactManager.addContact(contact);
         }
         List<Contact> contacts = contactManager.searchContacts("jane doe");
