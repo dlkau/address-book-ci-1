@@ -56,7 +56,7 @@ public class ContactManagerTest {
             contactManager.addContact(contact);
         }
         List<Contact> contacts = contactManager.searchContacts("");
-        assertEquals(6, contacts.size());
+        assertEquals(7, contacts.size());
     }
 
     @Test
@@ -65,7 +65,7 @@ public class ContactManagerTest {
             contactManager.addContact(contact);
         }
         List<Contact> contacts = contactManager.searchContacts(null);
-        assertEquals(6, contacts.size());
+        assertEquals(7, contacts.size());
     }
 
     @Test
