@@ -14,9 +14,13 @@ public class ContactManager {
         if (query == null || query.isEmpty()) {
             return contactDAO.getAllContacts();
         }
+        query = query.toLowerCase();
         ArrayList<Contact> results = new ArrayList<>();
         for (Contact contact : contactDAO.getAllContacts()) {
-            if (contact.getFullName().contains(query)) {
+            String searchString = contact.getFullName().toLowerCase()
+                    + " " + contact.getEmail().toLowerCase()
+                    + " " + contact.getPhone().toLowerCase();
+            if (searchString.contains(query)) {
                 results.add(contact);
             }
         }
