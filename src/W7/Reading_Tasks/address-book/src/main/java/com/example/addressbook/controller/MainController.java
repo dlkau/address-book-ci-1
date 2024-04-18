@@ -1,6 +1,7 @@
 package com.example.addressbook.controller;
 
 import com.example.addressbook.model.Contact;
+import com.example.addressbook.model.ContactManager;
 import com.example.addressbook.model.IContactDAO;
 import com.example.addressbook.model.SqliteContactDAO;
 import javafx.fxml.FXML;
@@ -16,7 +17,7 @@ import java.util.List;
 public class MainController {
     @FXML
     private ListView<Contact> contactsListView;
-    private IContactDAO contactDAO;
+    private ContactManager contactManager;
 
     @FXML
     private TextField firstNameTextField;
@@ -34,9 +35,11 @@ public class MainController {
     TextField searchFirstNameTextField;
     @FXML
     TextField searchLastNameTextField;
+    @FXML
+    private TextField searchTextField;
 
     public MainController(){
-        contactDAO = new SqliteContactDAO();
+        contactManager = new ContactManager(new SqliteContactDAO());
     }
 
     /**
@@ -90,17 +93,14 @@ public class MainController {
      * This method synchronizes the contacts list view with the contacts in the database.
      */
     private void syncContacts() {
-        Contact currentContact = contactsListView.getSelectionModel().getSelectedItem();
         contactsListView.getItems().clear();
-        List<Contact> contacts = contactDAO.getAllContacts();
+        // --- New code to search for contacts ---
+        String query = searchTextField.getText();
+        List<Contact> contacts = contactManager.searchContacts(query);
+        // --- End of new code ---
         boolean hasContact = !contacts.isEmpty();
         if (hasContact) {
             contactsListView.getItems().addAll(contacts);
-            // If the current contact is still in the list, re-select it
-            // Otherwise, select the first contact in the list
-            Contact nextContact = contacts.contains(currentContact) ? currentContact : contacts.get(0);
-            contactsListView.getSelectionModel().select(nextContact);
-            selectContact(nextContact);
         }
         // Show / hide based on whether there are contacts
         contactContainer.setVisible(hasContact);
@@ -119,7 +119,7 @@ public class MainController {
             selectedContact.setLastName(lastNameTextField.getText());
             selectedContact.setEmail(emailTextField.getText());
             selectedContact.setPhone(phoneTextField.getText());
-            contactDAO.updateContact(selectedContact);
+            contactManager.updateContact(selectedContact);
             syncContacts();
         }
     }
@@ -132,7 +132,7 @@ public class MainController {
         // Get the selected contact from the list view
         Contact selectedContact = contactsListView.getSelectionModel().getSelectedItem();
         if (selectedContact != null){
-            contactDAO.deleteContact(selectedContact);
+            contactManager.deleteContact(selectedContact);
             syncContacts();
         }
     }
@@ -149,7 +149,7 @@ public class MainController {
         final String DEFAULT_PHONE = "";
         Contact newContact = new Contact(DEFAULT_FIRST_NAME, DEFAULT_LAST_NAME, DEFAULT_EMAIL, DEFAULT_PHONE);
         // Add the new contact to the database
-        contactDAO.addContact(newContact);
+        contactManager.addContact(newContact);
         syncContacts();
         // Select the new contact in the list view
         // and focus the first name text field
@@ -176,7 +176,7 @@ public class MainController {
      */
     @FXML
     private void search(){
-        List<Contact> contacts = contactDAO.getAllContacts();
+        List<Contact> contacts = contactManager.getAllContacts();
         for (Contact contact : contacts ) {
             if (contact.getFirstName().equals(searchFirstNameTextField.getText()) &&
                     contact.getLastName().equals(searchLastNameTextField.getText())) {
@@ -199,5 +199,7 @@ public class MainController {
         if (firstContact != null){
             selectContact(firstContact);
         }
+        searchTextField.textProperty().addListener((observable, oldValue, newValue) -> syncContacts());
     }
+
 }

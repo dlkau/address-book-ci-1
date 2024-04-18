@@ -29,5 +29,17 @@ public class ContactManager {
         contactDAO.addContact(contact);
     }
 
+    public void deleteContact(Contact contact) {
+        contactDAO.deleteContact(contact);
+    }
+
+    public void updateContact(Contact contact) {
+        contactDAO.updateContact(contact);
+    }
+
+    public List<Contact> getAllContacts() {
+        return contactDAO.getAllContacts();
+    }
+
 
 }
