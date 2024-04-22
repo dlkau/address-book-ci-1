@@ -1,5 +1,7 @@
 package com.example.addressbook.model;
 
+import java.util.regex.Pattern;
+
 public class Contact {
     private int id;
     private String firstName;
@@ -51,7 +53,14 @@ public class Contact {
     }
 
     public void setEmail(String email){
-        this.email = email;
+        // Check the email address before adding the contact
+        String pattern = "^[\\w\\-\\.]+@([\\w-]+\\.)+[\\w-]{2,}$";
+        boolean isValidEmail = Pattern.compile(pattern).matcher(email).matches();
+        // Return if it is not a valid email
+        if(isValidEmail){
+            this.email = email;
+        }
+
     }
 
     public String getPhone(){

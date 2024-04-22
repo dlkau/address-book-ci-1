@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class MainController {
     @FXML
@@ -114,10 +115,26 @@ public class MainController {
     private void onEditConfirm(){
         // Get the selected contact from the list view
         Contact selectedContact = contactsListView.getSelectionModel().getSelectedItem();
+
+
+
+
+        emailTextField.setStyle(null);
         if(selectedContact != null){
+
+
+            // Check the email
+            String pattern = "^[\\w\\-\\.]+@([\\w-]+\\.)+[\\w-]{2,}$";
+            boolean isValidEmail = Pattern.compile(pattern).matcher(emailTextField.getText()).matches();
+            if (!isValidEmail){
+                emailTextField.setStyle("-fx-border-color: red;");
+                return;
+            }
+            // Ensure red styling is removed if email address is valid
+            emailTextField.setStyle(null);
+            selectedContact.setEmail(emailTextField.getText());
             selectedContact.setFirstname(firstNameTextField.getText());
             selectedContact.setLastName(lastNameTextField.getText());
-            selectedContact.setEmail(emailTextField.getText());
             selectedContact.setPhone(phoneTextField.getText());
             contactManager.updateContact(selectedContact);
             syncContacts();

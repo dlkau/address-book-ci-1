@@ -59,4 +59,17 @@ public class ContactTest {
     public void testGetFullName(){
         assertEquals("John Doe(john.doe@example.com)", contact.getFullName());
     }
+    @Test
+    public void testEmailValidatorAgainstInvalidEmail(){
+        String currEmail = contact.getEmail();
+        contact.setEmail("Thisisnotanmailaddress");
+        assertEquals(currEmail, contact.getEmail());
+    }
+    @Test
+    public void testEmailValidatorAgainstValidEmail(){
+        contact.setEmail("john.doe@example.com");
+        assertEquals("john.doe@example.com", contact.getEmail());
+    }
+
+
 }
