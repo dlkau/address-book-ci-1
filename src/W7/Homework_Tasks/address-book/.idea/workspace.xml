@@ -40,6 +40,8 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ContactManagerTest.executor": "Run",
+    "JUnit.ContactTest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -47,12 +49,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "W7__WORKING__BRANCH",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dlkau/OneDrive/Documents/QUT/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W7/Reading_Tasks/address-book",
+    "last_directory_selection": "C:/Users/dlkau/OneDrive/Documents/Queensland University of Technology/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W7/Reading_Tasks/address-book/src/main/java",
+    "last_opened_file_path": "C:/Users/dlkau/OneDrive/Documents/QUT/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W7/Homework_Tasks/address-book",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dlkau\OneDrive\Documents\QUT\2024\2024 Sem 1\CAB302\Excercises\Exercise_Assessed\SRC_CDE\src\W7\Reading_Tasks\address-book\src\main" />
+      <recent name="C:\Users\dlkau\OneDrive\Documents\QUT\2024\2024 Sem 1\CAB302\Excercises\Exercise_Assessed\SRC_CDE\src\W7\Reading_Tasks\address-book\src\main\java" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

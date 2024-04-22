@@ -36,26 +36,26 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.ContactManagerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ContactTest.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;W7__WORKING__BRANCH&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/dlkau/OneDrive/Documents/Queensland University of Technology/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W7/Reading_Tasks/address-book/src/main/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dlkau/OneDrive/Documents/Queensland University of Technology/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W7/Reading_Tasks/address-book&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ContactManagerTest.executor": "Run",
+    "JUnit.ContactTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "W7__WORKING__BRANCH",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/dlkau/OneDrive/Documents/Queensland University of Technology/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W7/Reading_Tasks/address-book/src/main/java",
+    "last_opened_file_path": "C:/Users/dlkau/OneDrive/Documents/QUT/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W7/Reading_Tasks/address-book",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />

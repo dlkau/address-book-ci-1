@@ -20,6 +20,7 @@
 
     <Label text="Select a contact to view or edit"/>
     <HBox VBox.vgrow="ALWAYS" spacing="20.0">
+        <TextField fx:id="searchTextField" promptText="Search by name, email or phone..." />
         <VBox spacing="10.0">
             <ListView fx:id="contactsListView"/>
             <Button text="New" onAction="#onAdd" maxWidth="Infinity"/>
