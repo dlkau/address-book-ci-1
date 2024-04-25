@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb1999f-8c06-4497-ab79-0200a77d2d10" name="Changes" comment="" />
+    <list default="true" id="ebb1999f-8c06-4497-ab79-0200a77d2d10" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +49,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "W7__WORKING__BRANCH",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/dlkau/OneDrive/Documents/Queensland University of Technology/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W7/Reading_Tasks/address-book/src/main/java",
     "last_opened_file_path": "C:/Users/dlkau/OneDrive/Documents/QUT/2024/2024 Sem 1/CAB302/Excercises/Exercise_Assessed/SRC_CDE/src/W7/Homework_Tasks/address-book",
